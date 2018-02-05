@@ -211,6 +211,8 @@ PHP
 
 * `preg_replace`
 
+	A bug in older versions of [PHP] where the user could get remote code execution
+	
 	[http://php.net/manual/en/function.preg-replace.php](http://php.net/manual/en/function.preg-replace.php)
 
 
@@ -243,11 +245,33 @@ PDF Files
 
 	A command-line tool, the first thing to reach for when given a PDF file. It extracts the images stored in a PDF file, but it needs the name of an output directory (that it will create for) to place the found images.
 
+* [`pdfdetach`][pdfdetach]
+
+	A command-line tool to extract files out of a [PDF]
+
 
 Forensics
 -----------
 
 * `foremost`
+
+	A command-line tool to carve files out of another file. Usage is `foremost [filename]` and it will create an `output` directory.
+
+```
+sudo apt install foremost
+```
+
+* `binwalk`
+
+	A command-line tool to carve files out of another file. Usage to extract is `binwalk -e [filename]` and it will create a `_[filename]_extracted` directory.
+
+```
+sudo apt install binwalk
+```
+
+
+
+
 
 Web
 ----------------
@@ -365,3 +389,4 @@ VisualBasicScript Reversing
 [bcompiler]: http://php.net/manual/en/book.bcompiler.php
 [PHP]: https://en.wikipedia.org/wiki/PHP
 [GET]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods
+[pdfdetach]: https://www.systutorials.com/docs/linux/man/1-pdfdetach/
