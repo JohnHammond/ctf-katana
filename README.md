@@ -270,8 +270,9 @@ sudo apt install binwalk
 ```
 
 
+* [`hachoir-subfile`][hachoir-subfile]
 
-
+	A command-line tool to carve out files of another file. Very similar to the other tools like `binwalk` and `foremost`, but always try everything!
 
 Web
 ----------------
@@ -282,29 +283,54 @@ Web
 
 * `/admin/`
 
-	
+	This directory is often found by directory scanning bruteforce tools, so I recommend just checking the directory on your own, as part of your own "low-hanging fruits" check.
 
 * `/.git/`
 	
-	A classic CTF challenge is to leave a `git` repository live and available on a website. You can see this with `nmap -A` (or whatever specific script catches it) and just by trying to view that specific folder, `/.git/`. A good command-line tool for this is [`GitDumper.sh`][https://github.com/internetwache/GitTools], or just simply using `wget`
+	A classic CTF challenge is to leave a `git` repository live and available on a website. You can see this with `nmap -A` (or whatever specific script catches it) and just by trying to view that specific folder, `/.git/`. A good command-line tool for this is [`GitDumper.sh`][https://github.com/internetwache/GitTools], or just simply using [`wget`][wget].
 
-* [`GitDumper.sh`]
+* [`GitDumper.sh`][GitDumper.sh]
+	
+	A command-line tool that will automatically scrape and download a [git] repository hosted online with a given URL.
 
-* XSS
+* [XSS]/[Cross-site scripting]
 
-	Cross-site scripting
+	[XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet). [Cross-site scripting], vulnerability where the user can control rendered [HTML] and ideally inject [JavaScript] code that could drive a browser to any other website or make any malicious network calls. Example test payload is as follows:
+
+```
+<IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
+```
 
 * Cookie Catcher
 
-* `sqlmap`
+	
+
+* [`requestb.in`][https://requestb.in/]
+
+	A free tool and online end-point that can be used to catch HTTP requests. Typically these are controlled and set by finding a [XSS] vulnerabilty.
+
+* [`hookbin.com`][https://hookbin.com/]
+
+	A free tool and online end-point that can be used to catch HTTP requests. Typically these are controlled and set by finding a [XSS] vulnerabilty.
+
+* [`sqlmap`][sqlmap]
+
+	A command-line tool written in [Python] to automatically detect and exploit vulnerable SQL injection points.	
 
 * Flask Template Injection
 
+	[https://nvisium.com/resources/blog/2015/12/07/injecting-flask.html](https://nvisium.com/resources/blog/2015/12/07/injecting-flask.html), [https://nvisium.com/resources/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html](https://nvisium.com/resources/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html), [https://nvisium.com/resources/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii.html](https://nvisium.com/resources/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii.html)
+
 * Explicit SQL Injection
+
+
 
 * Blind SQL Injection
 
+
+
 * gobuster
+
 
 * DirBuster
 
@@ -324,6 +350,10 @@ Windows Executables
 * [dnSpy]
 
 	A [Windows] GUI tool to decompile and reverse engineer [.NET] binaries
+
+* [PEiD][PEiD]
+
+	A [Windows] tool to detect common packers, cryptors and compilers for [Windows][Windows] [PE][PE] 
 
 * jetBrains .NET decompiler
 
@@ -390,3 +420,12 @@ VisualBasicScript Reversing
 [PHP]: https://en.wikipedia.org/wiki/PHP
 [GET]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods
 [pdfdetach]: https://www.systutorials.com/docs/linux/man/1-pdfdetach/
+[sqlmap]: https://github.com/sqlmapproject/sqlmap
+[hachoir-subfile]: https://pypi.python.org/pypi/hachoir-subfile/0.5.3
+[wget]: https://en.wikipedia.org/wiki/Wget
+[git]: https://git-scm.com/
+[Cross-site scripting]: https://en.wikipedia.org/wiki/Cross-site_scripting
+[XSS]: https://en.wikipedia.org/wiki/Cross-site_scripting
+[HTML]: https://en.wikipedia.org/wiki/HTML
+[JavaScript]: https://en.wikipedia.org/wiki/JavaScript
+[PEiD]: https://www.aldeid.com/wiki/PEiD
