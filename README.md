@@ -40,6 +40,27 @@ Steganography
 
 	Some classic challenges use an audio file to hide a flag or other sensitive stuff. SONIC visualizer easily shows you [spectrogram](https://en.wikipedia.org/wiki/Spectrogram). __If it sounds like there is random bleeps and bloops in the sound, try this tactic!__
 
+* [Detect DTMF Tones]
+
+	Audio frequencies common to a phone button, DTMF: [https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling).
+
+* [`hipshot`][hipshot]
+
+	A [Python] module to compress a video into a single standalone image, simulating a long-exposure photograph. Was used to steal a [QR code] visible in a video, displayed through "Star Wars" style text motion.	
+
+* [QR code]
+
+	A small square "barcode" image that holds data.
+
+* [`zbarimg`][zbarimg]
+
+	A command-line tool to quickly scan multiple forms of barcodes, [QR codes] included. Installed like so on a typical [Ubuntu] image: 
+
+```
+sudo apt install zbar-tools
+```
+	
+
 Cryptography
 -----------------
 
@@ -50,6 +71,7 @@ Cryptography
 	``` python
 	python >>> import pwn; pwn.xor("KEY", "RAW_BINARY_CIPHER")
 	```
+
 
 * Caesar Cipher
 
@@ -65,7 +87,7 @@ Cryptography
 
 	A command-line caesar cipher tool (noted above) found in the `bsdgames` package.
 
-* Vigenere Cipher
+* [Vigenere Cipher]
 
 	[http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx](http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx), [https://www.guballa.de/vigenere-solver](https://www.guballa.de/vigenere-solver)
 
@@ -102,9 +124,9 @@ Cryptography
 	[http://rumkin.com/tools/cipher/railfence.php](http://rumkin.com/tools/cipher/railfence.php)
 
 
-* Playfair Cipher
+* [Playfair Cipher]
 
-	[https://en.wikipedia.org/wiki/Playfair_cipher](https://en.wikipedia.org/wiki/Playfair_cipher)
+	racker: [http://bionsgadgets.appspot.com/ww_forms/playfair_ph_web_worker3.html](http://bionsgadgets.appspot.com/ww_forms/playfair_ph_web_worker3.html)
 
 * Polybius Square
 
@@ -154,7 +176,7 @@ PHP
 
 * Magic Hashes
 
-	A common vulnerability in PHP that fakes hash "collisions..." where the `==` operator falls short in PHP type comparison, thinking everything that follows `0e` is considered scientific notation (and therefore 0). More valuable info can be found here: [https://github.com/spaze/hashes](https://github.com/spaze/hashes), but below are the most common breaks.
+	A common vulnerability in [PHP] that fakes hash "collisions..." where the `==` operator falls short in [PHP] type comparison, thinking everything that follows `0e` is considered scientific notation (and therefore 0). More valuable info can be found here: [https://github.com/spaze/hashes](https://github.com/spaze/hashes), but below are the most common breaks.
 
 | Plaintext | MD5 Hash |
 | --------- | -------- |
@@ -191,12 +213,27 @@ PHP
 
 	[http://php.net/manual/en/function.preg-replace.php](http://php.net/manual/en/function.preg-replace.php)
 
+
+* [`phpdc.phpr`][phpdc.phpr]
+
+	A command-line tool to decode [`bcompiler`][bcompiler] compiled [PHP] code.
+
+
+* [`php://filter` for Local File Inclusion](https://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/)
+
+	A bug in [PHP] where if GET HTTP variables in the URL are controlling the navigation of the web page, perhaps the source code is `include`-ing other files to be served to the user. This can be manipulated by using [PHP filters](http://php.net/manual/en/filters.php) to potentially retrieve source code. Example like so:
+
+```
+http://xqi.cc/index.php?m=php://filter/convert.base64-encode/resource=index
+```
+
+
 PDF Files
 -------------
 
 * `pdfinfo`	
 	
-
+	A command-line tool to get a basic synopsis of what the [PDF] file is.
 
 * `pdfcrack`
 
@@ -217,7 +254,11 @@ Web
 
 * `robots.txt`
 
+	This file tries to hide webpages from web crawlers, like Google or Bing or Yahoo. A lot of sites try and use this mask sensitive files or folders, so it should always be some where you check during a CTF. [http://www.robotstxt.org/](http://www.robotstxt.org/)
+
 * `/admin/`
+
+	
 
 * `/.git/`
 	
@@ -227,13 +268,64 @@ Web
 
 * XSS
 
+	Cross-site scripting
+
 * Cookie Catcher
 
 * `sqlmap`
 
 * Flask Template Injection
 
-* SQL Injection
+* Explicit SQL Injection
+
+* Blind SQL Injection
+
+* gobuster
+
+* DirBuster
+
+* `nikto`
+
+
+* Burpsuite
+
+
+Windows Executables
+-------------
+
+* [`pefile`][pefile]
+
+	A [Python] module that examines the headers in a Windows [PE (Portable Executable)][PE] file. 
+
+* [dnSpy]
+
+	A [Windows] GUI tool to decompile and reverse engineer [.NET] binaries
+
+* jetBrains .NET decompiler
+
+* AutoIT
+
+Python Reversing
+------------
+
+* [Easy Python Decompiler]
+
+	A small `.exe` GUI application that will "decompile" [Python] bytecode, often seen in `.pyc` extension. The tool runs reliably on [Linux] with [Wine].
+
+
+
+Java Reversing
+----------
+
+
+
+
+Android APK Reversing
+-----------
+
+
+VisualBasicScript Reversing
+---------------------------
 
 
 
@@ -250,3 +342,26 @@ Web
 [pcapng]: https://github.com/pcapng/pcapng
 [pdfcrack]: http://pdfcrack.sourceforge.net/index.html
 [GitDumper.sh]: https://github.com/internetwache/GitTools
+[pefile]: https://github.com/erocarrera/pefile
+[Python]: https://www.python.org/
+[PE]: https://en.wikipedia.org/wiki/Portable_Executable
+[Portable Executable]: https://en.wikipedia.org/wiki/Portable_Executable
+[hipshot]: https://bitbucket.org/eliteraspberries/hipshot
+[QR code]: https://en.wikipedia.org/wiki/QR_code
+[QR codes]: https://en.wikipedia.org/wiki/QR_code
+[QR]: https://en.wikipedia.org/wiki/QR_code
+[zbarimg]: https://linux.die.net/man/1/zbarimg
+[Linux]: https://en.wikipedia.org/wiki/Linux
+[Ubuntu]: https://en.wikipedia.org/wiki/Ubuntu_(operating_system)
+[Wine]: https://en.wikipedia.org/wiki/Wine_(software)
+[Detect DTMF Tones]: http://dialabc.com/sound/detect/index.html
+[dnSpy]: https://github.com/0xd4d/dnSpy
+[Windows]: https://en.wikipedia.org/wiki/Microsoft_Windows
+[.NET]: https://en.wikipedia.org/wiki/.NET_Framework
+[Vigenere Cipher]: https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
+[PDF]: https://en.wikipedia.org/wiki/Portable_Document_Format
+[Playfair Cipher]: https://en.wikipedia.org/wiki/Playfair_cipher
+[phpdc.phpr]:https://github.com/lighttpd/xcache/blob/master/bin/phpdc.phpr
+[bcompiler]: http://php.net/manual/en/book.bcompiler.php
+[PHP]: https://en.wikipedia.org/wiki/PHP
+[GET]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods
