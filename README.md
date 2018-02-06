@@ -142,6 +142,10 @@ Cryptography
 	The "blind SQL" of cryptography... leak the flag out by testing for characters just one byte away from the block length. 
 
 
+* Two-Time Pad
+
+	
+
 Networking
 ---------------
 
@@ -298,6 +302,10 @@ Web
 
 	This file tries to hide webpages from web crawlers, like Google or Bing or Yahoo. A lot of sites try and use this mask sensitive files or folders, so it should always be some where you check during a CTF. [http://www.robotstxt.org/](http://www.robotstxt.org/)
 
+* [Edit This Cookie]
+
+	A web browser plug-in that offers an easy interface to modifying [cookies].
+
 * `/admin/`
 
 	This directory is often found by directory scanning bruteforce tools, so I recommend just checking the directory on your own, as part of your own "low-hanging fruits" check.
@@ -389,6 +397,17 @@ Python Reversing
 
 
 
+Binary/pwn
+--------------
+
+
+* `printf` vulnerability
+
+* [`formatStringExploiter`][formatStringExploiter]
+
+	A good [Python] module to streamline exploiting a [format string vulnerability].
+
+
 Java Reversing
 ----------
 
@@ -463,3 +482,9 @@ Miscellaneous
 [hexed.it]: https://hexed.it/
 [Magic Numbers]: https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files
 [Magic Number]: https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files
+[Edit This Cookie]: http://www.editthiscookie.com/
+[cookie]: https://en.wikipedia.org/wiki/HTTP_cookie
+[cookies]: https://en.wikipedia.org/wiki/HTTP_cookie
+[formatStringExploiter]: http://formatstringexploiter.readthedocs.io/en/latest/index.html
+[format string vulnerability]: https://www.owasp.org/index.php/Format_string_attack
+[printf vulnerability]: https://www.owasp.org/index.php/Format_string_attack
