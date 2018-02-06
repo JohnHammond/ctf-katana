@@ -247,11 +247,28 @@ PDF Files
 
 * [`pdfdetach`][pdfdetach]
 
-	A command-line tool to extract files out of a [PDF]
+	A command-line tool to extract files out of a [PDF].
 
 
 Forensics
 -----------
+
+* [Magic Numbers]
+
+	The starting values that identify a file format. These are often crucial for programs to properly read a certain file type, so they must be correct. If some files are acting strangely, try verifying their [magic number] with a [trusted list of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures).
+
+* [`hexed.it`][hexed.it]
+
+	An online tool that allows you to modify the hexadecimal and binary values of an uploaded file. This is a good tool for correcting files with a corrupt [magic number]
+
+* [`dumpzilla`][dumpzilla]
+
+	A [Python] script to examine a `.mozilla` configuration file, to examine downloads, bookmarks, history or bookmarks and registered passwords. Usage may be as such:
+
+```
+python dumpzilla.py .mozilla/firefox/c3a958fk.default/ --Downloads --History --Bookmarks --Passwords
+```
+
 
 * `foremost`
 
@@ -301,6 +318,10 @@ Web
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
 ```
 
+* [`wpscan`][wpscan]
+
+	* A Ruby script to scan and do reconnaissance on a [Wordpress] application. 
+	
 * Cookie Catcher
 
 	
@@ -382,6 +403,12 @@ VisualBasicScript Reversing
 ---------------------------
 
 
+Miscellaneous
+----------
+
+* 15 Puzzle
+	
+	A sliding puzzle that consists of a 4x4 grid with numbered square tiles, with one missing, set in a random order. It was involved in SharifCTF to determine if a group of these puzzles was solvable: [https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/](https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/)
 
 
 [steghide]: http://steghide.sourceforge.net/
@@ -429,3 +456,10 @@ VisualBasicScript Reversing
 [HTML]: https://en.wikipedia.org/wiki/HTML
 [JavaScript]: https://en.wikipedia.org/wiki/JavaScript
 [PEiD]: https://www.aldeid.com/wiki/PEiD
+[wpscan]: https://wpscan.org/
+[Ruby]: https://www.ruby-lang.org/en/
+[Wordpress]: https://en.wikipedia.org/wiki/WordPress
+[dumpzilla]: http://www.dumpzilla.org/
+[hexed.it]: https://hexed.it/
+[Magic Numbers]: https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files
+[Magic Number]: https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files
