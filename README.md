@@ -415,6 +415,10 @@ Binary/pwn
 
 	A good [Python] module to streamline exploiting a [format string vulnerability].
 
+* 64-bit Buffer Overflow
+
+	64-bit buffer overflow challenges are often difficult because the null bytes get in the way of memory addresses (for the function you want to jump to, that you can usually find with `readelf -s`). But, check if whether or not the function address you need starts with the same hex values already on the stack (in `rsp`). Maybe you only have to write two or three bytes after the overflow, rather than the whole function address. 
+
 
 Java Reversing
 ----------
