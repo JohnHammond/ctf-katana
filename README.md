@@ -16,6 +16,14 @@ Hopefully, at some point I will develop software that will run through a lot of 
 Steganography
 ---------------------
 
+* [`openstego`][OpenStego]
+
+	A [Java][Java] [`.JAR`][JAR] tool, that can extract data from an image. A good tool to use on guessing challenges, when you don't have any other leads. We found this tool after the [Misc50](http://0xahmed.ninja/nullcon-hackim18-ctf-writeups/) challenge from [HackIM 2018](https://ctftime.org/event/566)
+
+* [`Stegsolve.jar`][Stegsolve.jar]
+
+	A [Java][Java] [`.JAR`][JAR] tool, that will open an image and let you as the user arrow through different renditions of the image (viewing color channels, inverted colors, and more). The tool is surprisingly useful.
+
 * [`steghide`][steghide]
 
 	A command-line tool typically used alongside a password or key, that could be uncovered some other way when solving a challenge. 
@@ -488,3 +496,8 @@ Miscellaneous
 [formatStringExploiter]: http://formatstringexploiter.readthedocs.io/en/latest/index.html
 [format string vulnerability]: https://www.owasp.org/index.php/Format_string_attack
 [printf vulnerability]: https://www.owasp.org/index.php/Format_string_attack
+[Java]: https://en.wikipedia.org/wiki/Java_(programming_language)
+[JAR]: https://en.wikipedia.org/wiki/JAR_(file_format)
+[OpenStego]: https://www.openstego.com/
+[Stegsolve.jar]: http://www.caesum.com/handbook/stego.htm
+[Stegsolve]: http://www.caesum.com/handbook/stego.htm
