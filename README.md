@@ -72,6 +72,14 @@ sudo apt install zbar-tools
 Cryptography
 -----------------
 
+* Reversed Text
+
+	Sometimes a "ciphertext" is just as easy as reversed text. Don't forgot to check under this rock! You can reverse a string in [Python] like so:
+
+```
+"UOYMORFEDIHOTGNIYRTEBTHGIMFTCATAHTTERCESASISIHT"[::-1]
+```
+
 * XOR
 
 	ANY text could be XOR'd. Techniques for this are Trey's code, and XORing the data against the known flag format. Typically it is given in just hex, but once it is decoded into raw binary data, it gives it keeps it's hex form (as in `\xde\xad\xbe\xef` etc..) Note that you can do easy XOR locally with Python like so (you need `pwntools` installed):
@@ -441,6 +449,11 @@ Miscellaneous
 	
 	A sliding puzzle that consists of a 4x4 grid with numbered square tiles, with one missing, set in a random order. It was involved in SharifCTF to determine if a group of these puzzles was solvable: [https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/](https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/)
 
+
+* Chrome Password Dump
+
+	A [Windows] command-line tool to dump passwords saved with Google Chrome.
+	[http://securityxploded.com/chrome-password-dump.php](http://securityxploded.com/chrome-password-dump.php)
 
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
