@@ -72,6 +72,7 @@ sudo apt install zbar-tools
 Cryptography
 -----------------
 
+
 * Reversed Text
 
 	Sometimes a "ciphertext" is just as easy as reversed text. Don't forgot to check under this rock! You can reverse a string in [Python] like so:
@@ -102,6 +103,10 @@ Cryptography
 * `caesar`
 
 	A command-line caesar cipher tool (noted above) found in the `bsdgames` package.
+
+* [Atbash Cipher]
+
+	If you have some text that you have no idea what it is, try the [Atbash cipher]! It's a letter mapping, but the alphabet is reversed: like `A` maps to `Z`, `B` maps to `Y` and so on. There are tons of online tools to do this ([http://rumkin.com/tools/cipher/atbash.php](http://rumkin.com/tools/cipher/atbash.php)), and you can build it with [Python].
 
 * [Vigenere Cipher]
 
@@ -190,6 +195,11 @@ tcpflow -r my_file.pcap
 ls -1t | head -5 # see the last 5 recently modified files
 ```
 
+
+
+* [PcapXray]
+
+	A GUI tool to visualize network traffic.
 
 PHP
 ------------
@@ -518,3 +528,5 @@ Miscellaneous
 [OpenStego]: https://www.openstego.com/
 [Stegsolve.jar]: http://www.caesum.com/handbook/stego.htm
 [Stegsolve]: http://www.caesum.com/handbook/stego.htm
+[PcapXray]: https://github.com/Srinivas11789/PcapXray
+[Atbash Cipher]: https://en.wikipedia.org/wiki/Atbash
