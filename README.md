@@ -336,6 +336,11 @@ sudo apt install binwalk
 
 	A command-line tool to carve out files of another file. Very similar to the other tools like `binwalk` and `foremost`, but always try everything!
 
+
+* [TestDisk]
+
+	A command-line tool, used to recover deleted files from a file system image. Handy to use if given a `.dd` and `.img` file etc.
+
 Web
 ----------------
 
@@ -545,3 +550,4 @@ Miscellaneous
 [Stegsolve]: http://www.caesum.com/handbook/stego.htm
 [PcapXray]: https://github.com/Srinivas11789/PcapXray
 [Atbash Cipher]: https://en.wikipedia.org/wiki/Atbash
+[TestDisk]: https://www.cgsecurity.org/Download_and_donate.php/testdisk-7.1-WIP.linux26.tar.bz2
