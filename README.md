@@ -124,6 +124,21 @@ Cryptography
 
 * RSA: Multi-prime RSA
 
+* RSA: `e` is 3 (or small)
+
+	If `e` is 3, you can try the cubed-root attack. If you the cubed root of `c`, and if that is smaller than the cubed root of `n`, then your plaintext message `m` is just the cubed root of `c`! Here is [Python] code to take the cubed root:
+
+```
+def root3rd(x):
+    y, y1 = None, 2
+    while y!=y1:
+        y = y1
+        y3 = y**3
+        d = (2*y3+x)
+        y1 = (y*(y3+2*x)+d//2)//d
+    return y 
+``` 
+
 * RSA: Weiner's Little D Attack
 
 	The telltale sign for this kind of challenge is an enormously large `e` value. Typically `e` is either 65537 (0x10001) or `3` (like for a Chinese Remainder Theorem challenge)
