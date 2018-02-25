@@ -298,6 +298,7 @@ PDF Files
 Forensics
 -----------
 
+
 * [Magic Numbers]
 
 	The starting values that identify a file format. These are often crucial for programs to properly read a certain file type, so they must be correct. If some files are acting strangely, try verifying their [magic number] with a [trusted list of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures).
@@ -340,6 +341,16 @@ sudo apt install binwalk
 * [TestDisk]
 
 	A command-line tool, used to recover deleted files from a file system image. Handy to use if given a `.dd` and `.img` file etc.
+
+
+PNG File Forensics
+--------------------
+
+
+* `pngcheck`
+
+	A command-line tool for "checking" a [PNG] image file. Especially good for verifying checksums.
+
 
 Web
 ----------------
@@ -559,3 +570,4 @@ sudo apt install -y caca-utils
 [PcapXray]: https://github.com/Srinivas11789/PcapXray
 [Atbash Cipher]: https://en.wikipedia.org/wiki/Atbash
 [TestDisk]: https://www.cgsecurity.org/Download_and_donate.php/testdisk-7.1-WIP.linux26.tar.bz2
+[PNG]: https://en.wikipedia.org/wiki/Portable_Network_Graphics
