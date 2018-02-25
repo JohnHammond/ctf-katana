@@ -484,6 +484,14 @@ Miscellaneous
 
 	A [Windows] command-line tool to dump passwords saved with Google Chrome.
 	[http://securityxploded.com/chrome-password-dump.php](http://securityxploded.com/chrome-password-dump.php)
+img
+* `img2txt`
+
+	A command-line tool to convert an image into ASCII for the terminal. Can be installed like so:
+
+```
+sudo apt install -y caca-utils
+```
 
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
