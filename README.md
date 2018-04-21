@@ -72,6 +72,13 @@ sudo apt install zbar-tools
 Cryptography
 -----------------
 
+* Keyboard Shift
+	
+	[https://www.dcode.fr/keyboard-shift-cipher](https://www.dcode.fr/keyboard-shift-cipher) If you see any thing that has the shape of a sentence but it looks like nonsense letters, and notes some shift left or right, it may be a keyboard shift...
+
+* Bit Shift
+
+	Sometimes the letters may be shifted by a stated hint, like a binary bit shift ( x >> 1 ) or ( x << 1 ).
 
 * Reversed Text
 
