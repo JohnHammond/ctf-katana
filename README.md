@@ -72,6 +72,7 @@ sudo apt install zbar-tools
 Cryptography
 -----------------
 
+
 * Keyboard Shift
 	
 	[https://www.dcode.fr/keyboard-shift-cipher](https://www.dcode.fr/keyboard-shift-cipher) If you see any thing that has the shape of a sentence but it looks like nonsense letters, and notes some shift left or right, it may be a keyboard shift...
@@ -153,6 +154,11 @@ def root3rd(x):
 * RSA: Chinese Remainder Attack
 
 	These challenges can be spotted when given  mutiple `c` cipher texts and multiple `n` moduli. `e` must be the same number of given `c` and `n` pairs.
+
+* LC4
+
+	This is an adaptation of RC4... just not. There is an implementation available in Python.
+	[https://github.com/dstein64/LC4/blob/master/documentation.md](https://github.com/dstein64/LC4/blob/master/documentation.md)
 
 * Elgamal
 
@@ -468,6 +474,15 @@ Web
 * Burpsuite
 
 
+
+PowerShell
+-------------
+
+* [nishang]
+
+	A PowerShell suite of tools for pentesting. Has support for an ICMP reverse shell!
+
+
 Windows Executables
 -------------
 
@@ -517,6 +532,10 @@ VisualBasicScript Reversing
 
 Miscellaneous
 ----------
+
+* Wordsearches
+
+
 
 * 15 Puzzle
 	
@@ -610,3 +629,4 @@ sudo apt install -y caca-utils
 [remote code execution]: https://en.wikipedia.org/wiki/Arbitrary_code_execution
 [arbitrary code execution]: https://en.wikipedia.org/wiki/Arbitrary_code_execution
 [XSStrike]: https://github.com/UltimateHackers/XSStrike
+[nishang]: https://github.com/samratashok/nishang
