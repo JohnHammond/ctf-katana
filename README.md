@@ -351,7 +351,7 @@ sudo apt install foremost
 	A command-line tool to carve files out of another file. Usage to extract is `binwalk -e [filename]` and it will create a `_[filename]_extracted` directory.
 
 ```
-sudo apt install binwalk
+	sudo apt install binwalk
 ```
 
 
@@ -406,6 +406,10 @@ Web
 * [Edit This Cookie]
 
 	A web browser plug-in that offers an easy interface to modifying [cookies].
+
+* Backup pages ( `~` and `.bak` and `.swp` )
+
+	Some times you may be able to dig up an old version of a webpage (or some PHP source code!) by adding the usual backup suffixes. A good thing to check!
 
 * `/admin/`
 
@@ -535,6 +539,7 @@ Miscellaneous
 
 * Wordsearches
 
+	Some CTFs have me solve wordsearchs as part of a challenge (TJCTF 2018). This code is super helpful: [https://github.com/robbiebarrat/word-search](https://github.com/robbiebarrat/word-search)
 
 
 * 15 Puzzle
