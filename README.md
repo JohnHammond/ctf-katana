@@ -13,6 +13,36 @@ Hopefully, at some point I will develop software that will run through a lot of 
 
 ---------------
 
+
+Esoteric Languages
+-----------------------
+
+* Brainfuck
+
+	This language is easily detectable by its huge use of plus signs, braces, and arrows. 	There are plenty of online interpreters, like this one: [https://copy.sh/brainfuck/](https://copy.sh/brainfuck/) Some example code:
+
+```
+++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>+++++++++++++++++.--.--------------.+++++++++++++.----.-----------
+--.++++++++++++.--------.<------------.<++.>>----.+.<+++++++++++.+++++++++++++.>+++++++++++++++++.-------------
+--.++++.+++++++++++++++.<<.>>-------.<+++++++++++++++.>+++..++++.--------.+++.<+++.<++++++++++++++++++++++++++
+.<++++++++++++++++++++++.>++++++++++++++..>+.----.>------.+++++++.--------.<+++.>++++++++++++..-------.++.
+```
+
+* [Malboge]
+
+	An esoteric language that looks a lot like Base85... but isn't. Often has references to "Inferno" or "Hell" or "Dante." Online interpreters like so: [http://www.malbolge.doleczek.pl/](http://www.malbolge.doleczek.pl/) Example code:
+
+```
+(=<`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:'8dc
+```
+
+* [Piet]
+
+	A graphical programming language... looks like large 8-bit pixels in a variety of colors. Can be interpreted with the tool [`npiet`][npiet]
+
+![https://www.bertnase.de/npiet/hi.png](https://www.bertnase.de/npiet/hi.png)
+
+
 Steganography
 ---------------------
 
@@ -441,8 +471,6 @@ Web
 	
 * Cookie Catcher
 
-	
-
 * [`requestb.in`][https://requestb.in/]
 
 	A free tool and online end-point that can be used to catch HTTP requests. Typically these are controlled and set by finding a [XSS] vulnerabilty.
@@ -635,3 +663,6 @@ sudo apt install -y caca-utils
 [arbitrary code execution]: https://en.wikipedia.org/wiki/Arbitrary_code_execution
 [XSStrike]: https://github.com/UltimateHackers/XSStrike
 [nishang]: https://github.com/samratashok/nishang
+[Malboge]: https://en.wikipedia.org/wiki/Malbolge
+[Piet]: https://esolangs.org/wiki/Piet
+[npiet]: https://www.bertnase.de/npiet/
