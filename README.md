@@ -64,7 +64,7 @@ Steganography
 
 * Morse Code
 
-	Always test for this if you are seeing two distinct values... _it may not always be binary!_
+	Always test for this if you are seeing two distinct values... _it may not always be binary!_ Online decoders like so: [https://morsecode.scphillips.com/translator.html](https://morsecode.scphillips.com/translator.html) 	
 
 * Whitespace
 
@@ -81,6 +81,12 @@ Steganography
 * [Detect DTMF Tones]
 
 	Audio frequencies common to a phone button, DTMF: [https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling).
+
+* Phone-Keypad
+
+	Some messages may be hidden with a string of numbers, but really be encoded with old cell-phone keypads, like text messaging with numbers repeated:
+
+![https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSySxHjMFv80XWp74LZpfrnAro6a1MLqeF1F3zpguA5PGSW9ov](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSySxHjMFv80XWp74LZpfrnAro6a1MLqeF1F3zpguA5PGSW9ov)
 
 * [`hipshot`][hipshot]
 
@@ -148,7 +154,7 @@ Cryptography
 
 * [Vigenere Cipher]
 
-	[http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx](http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx), [https://www.guballa.de/vigenere-solver](https://www.guballa.de/vigenere-solver)
+	[http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx](http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx), [https://www.guballa.de/vigenere-solver](https://www.guballa.de/vigenere-solver) and personal Python code here: [https://pastebin.com/2Vr29g6J](https://pastebin.com/2Vr29g6J)
 
 * Beaufourt Cipher
 
@@ -158,7 +164,7 @@ Cryptography
 
 * RSA: Classic RSA
 
-	Variables typically given: `n`, `c`, `e`. _ALWAYS_ try and give to [http://factordb.com](http://factordb.com)
+	Variables typically given: `n`, `c`, `e`. _ALWAYS_ try and give to [http://factordb.com](http://factordb.com). If `p` and `q` are able to be determined, use some RSA decryptor; handmade code available here: [https://pastebin.com/ERAMhJ1v](https://pastebin.com/ERAMhJ1v)
 
 * RSA: Multi-prime RSA
 
@@ -179,13 +185,13 @@ def root3rd(x):
 
 * RSA: Weiner's Little D Attack
 
-	The telltale sign for this kind of challenge is an enormously large `e` value. Typically `e` is either 65537 (0x10001) or `3` (like for a Chinese Remainder Theorem challenge)
+	The telltale sign for this kind of challenge is an enormously large `e` value. Typically `e` is either 65537 (0x10001) or `3` (like for a Chinese Remainder Theorem challenge). Some stolen code available here: [https://pastebin.com/VKjYsDqD](https://pastebin.com/VKjYsDqD)
 
 * RSA: Chinese Remainder Attack
 
-	These challenges can be spotted when given  mutiple `c` cipher texts and multiple `n` moduli. `e` must be the same number of given `c` and `n` pairs.
+	These challenges can be spotted when given  mutiple `c` cipher texts and multiple `n` moduli. `e` must be the same number of given `c` and `n` pairs. Some handmade code here: [https://pastebin.com/qypwc6wH](https://pastebin.com/qypwc6wH)
 
-* LC4
+* [LC4]
 
 	This is an adaptation of RC4... just not. There is an implementation available in Python.
 	[https://github.com/dstein64/LC4/blob/master/documentation.md](https://github.com/dstein64/LC4/blob/master/documentation.md)
@@ -194,7 +200,7 @@ def root3rd(x):
 
 * Affine Cipher
 
-* Substitution Cipher
+* Substitution Cipher (use quip quip!)
 
 	[https://quipqiup.com/](https://quipqiup.com/)
 
@@ -496,7 +502,8 @@ Web
 
 
 * gobuster
-
+	
+	
 
 * DirBuster
 
@@ -504,6 +511,24 @@ Web
 
 
 * Burpsuite
+	
+
+
+Reverse Engineering
+-------------------
+
+* `ltrace` and `strace`
+
+	Easy command-line tools to see some of the code being executed as you follow through a binary. Usage: `ltrace ./binary`
+
+* Hopper
+
+* Binary Ninja
+
+* gdb
+
+* IDA
+
 
 
 
@@ -513,6 +538,10 @@ PowerShell
 * [nishang]
 
 	A PowerShell suite of tools for pentesting. Has support for an ICMP reverse shell!
+
+* [Empire]
+
+	HUGE PowerShell library and tool to do a lot of post-exploitation.
 
 
 Windows Executables
@@ -534,6 +563,8 @@ Windows Executables
 
 * AutoIT converter
 
+	When debugging AutoIT programs, you may get a notification: "This is a compiled AutoIT script". Here is a good thing to use to decode them: [https://www.autoitscript.com/site/autoit/downloads/](https://www.autoitscript.com/site/autoit/downloads/)
+	
 Python Reversing
 ------------
 
@@ -549,9 +580,11 @@ Binary/pwn
 
 * `printf` vulnerability
 
+	A C binary vulnerability, where `printf` is used with user-supplied input without any arguments. Hand-made code to exploit and overwrite functions: [https://pastebin.com/0r4WGn3D](https://pastebin.com/0r4WGn3D) and a video walkthrough explaining: [https://www.youtube.com/watch?v=t1LH9D5cuK4](https://www.youtube.com/watch?v=t1LH9D5cuK4)
+
 * [`formatStringExploiter`][formatStringExploiter]
 
-	A good [Python] module to streamline exploiting a [format string vulnerability].
+	A good [Python] module to streamline exploiting a [format string vulnerability]. THIS IS NOT ALWAYS A GOOD TACTIC...
 
 * 64-bit Buffer Overflow
 
@@ -565,10 +598,41 @@ VisualBasicScript Reversing
 Miscellaneous
 ----------
 
+
+
+* [Base64], [Base32], [Base85]
+
+```
+Base64:
+TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlz
+IHNpbmd1bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1c3Qgb2Yg
+dGhlIG1pbmQsIHRoYXQgYnkgYSBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0aGUgY29udGlu
+dWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb24gb2Yga25vd2xlZGdlLCBleGNlZWRzIHRo
+ZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=
+```
+
+```
+Base32
+ORUGS4ZANFZSAYLOEBSXQYLNOBWGKIDPMYQGEYLTMUZTELRANF2CA2LTEB3GS43JMJWGKIDCPEQGY33UOMQG6ZRAMNQXA2LUMFWCA3DFOR2GK4TTEBQW4ZBANVXXEZJAMVYXKYLMOMQHG2LHNZZSAZTPOIQHAYLEMRUW4ZZMEBSXQ5DSME======
+```
+
+```
+Base85:
+<~9jqo^BlbD-BleB1DJ+*+F(f,q/0JhKF<GL>Cj@.4Gp$d7F!,L7@<6@)/0JDEF<G%<+EV:2F!,
+O<DJ+*.@<*K0@<6L(Df-\0Ec5e;DffZ(EZee.Bl.9pF"AGXBPCsi+DGm>@3BB/F*&OCAfu2/AKY
+i(DIb:@FD,*)+C]U=@3BN#EcYf8ATD3s@q?d$AftVqCh[NqF<G:8+EV:.+Cf>-FD5W8ARlolDIa
+l(DId<j@<?3r@:F%a+D58'ATD4$Bl@l3De:,-DJs`8ARoFb/0JMK@qB4^F!,R<AKZ&-DfTqBG%G
+>uD.RTpAKYo'+CT/5+Cei#DII?(E,9)oF*2M7/c~>
+```
+
 * Wordsearches
 
 	Some CTFs have me solve wordsearchs as part of a challenge (TJCTF 2018). This code is super helpful: [https://github.com/robbiebarrat/word-search](https://github.com/robbiebarrat/word-search)
 
+
+* Password-protected Zip Files:  [`fcrackzip`][fcrackzip] and `zip2john.py`
+
+	Use
 
 * 15 Puzzle
 	
@@ -579,7 +643,7 @@ Miscellaneous
 
 	A [Windows] command-line tool to dump passwords saved with Google Chrome.
 	[http://securityxploded.com/chrome-password-dump.php](http://securityxploded.com/chrome-password-dump.php)
-img
+
 * `img2txt`
 
 	A command-line tool to convert an image into ASCII for the terminal. Can be installed like so:
@@ -587,6 +651,14 @@ img
 ```
 sudo apt install -y caca-utils
 ```
+
+
+* Strange Symbols/Characters
+
+	Some CTFs will try and hide a message on a picture with strange symbols. Try and Google Reverse Image searcht these. They may be Egyptian Characters: 
+
+![http://www.virtual-egypt.com/newhtml/hieroglyphics/sample/alphabet.gif](http://www.virtual-egypt.com/newhtml/hieroglyphics/sample/alphabet.gif)
+
 
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
@@ -666,3 +738,10 @@ sudo apt install -y caca-utils
 [Malboge]: https://en.wikipedia.org/wiki/Malbolge
 [Piet]: https://esolangs.org/wiki/Piet
 [npiet]: https://www.bertnase.de/npiet/
+[LC4]: https://www.schneier.com/blog/archives/2018/05/lc4_another_pen.html
+[Empire]: https://github.com/EmpireProject/Empire
+[Base64]: https://en.wikipedia.org/wiki/Base64
+[Base32]: https://en.wikipedia.org/wiki/Base32
+[Base85]: https://en.wikipedia.org/wiki/Ascii85
+[fcrackzip]: https://github.com/hyc/fcrackzip
+[zsteg]: https://github.com/zed-0xff/zsteg
