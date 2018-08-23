@@ -160,6 +160,11 @@ Cryptography
 
 	[https://www.dcode.fr/beaufort-cipher](https://www.dcode.fr/beaufort-cipher)
 
+
+* Python random module cracker/predictor
+
+	[https://github.com/tna0y/Python-random-module-cracker](https://github.com/tna0y/Python-random-module-cracker)... helps attack the Mersenne Twister used in Python's random module. 
+
 * Transposition Cipher
 
 * RSA: Classic RSA
@@ -441,7 +446,7 @@ Web
 
 * [Edit This Cookie]
 
-	A web browser plug-in that offers an easy interface to modifying [cookies].
+	A web browser plug-in that offers an easy interface to modifying [cookies]. ___THIS IS OFTEN OVERLOOKED, WITHOUT CHANGING THE VALUE OF THE COOKIES... BE SURE TO FUZZ EVERYTHING, INCLUDING COOKIE VALUES!___
 
 * Backup pages ( `~` and `.bak` and `.swp` )
 
@@ -465,6 +470,21 @@ Web
 
 ```
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
+```
+
+* [CloudFlare Bypass](https://github.com/Anorov/cloudflare-scrape)
+
+	If you need to script or automate against a page that uses the I'm Under Attack Mode from CloudFlare, or DDOS protection, you can do it like this with linked Python module.
+	
+``` python
+#!/usr/bin/env python
+
+import cfscrape
+
+url = 'http://yashit.tech/tryharder/'
+
+scraper = cfscrape.create_scraper() 
+print scraper.get(url).content 
 ```
 
 * [XSStrike]
@@ -493,12 +513,18 @@ Web
 
 	[https://nvisium.com/resources/blog/2015/12/07/injecting-flask.html](https://nvisium.com/resources/blog/2015/12/07/injecting-flask.html), [https://nvisium.com/resources/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html](https://nvisium.com/resources/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html), [https://nvisium.com/resources/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii.html](https://nvisium.com/resources/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii.html)
 
+
+* SQL `IF` statements
+
+	These are handy for some injections and setting up some Blind SQL if you need to. Syntax is like `SELECT ( IF ( 1=1, "Condition successful!", "Condition errored!" ) )`
+
 * Explicit SQL Injection
 
 	
 
 * Blind SQL Injection
 
+	
 
 
 * gobuster
@@ -574,9 +600,12 @@ Python Reversing
 
 
 
-Binary/pwn
+Binary Exploitation/pwn
 --------------
 
+* Basic Stack Overflow
+
+	Use `readelf -s <binary>` to get the location of a function to jump to -- overflow in Python, find offset with `dmesg`, and jump.	
 
 * `printf` vulnerability
 
