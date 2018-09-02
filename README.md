@@ -62,6 +62,10 @@ Steganography
 
 	Command-line tool for use against Least Significant Bit steganography... unfortunately only works against PNG and BMP images.
 
+* [`jsteg`][jsteg]
+
+    Another command-line tool to use against JPEG images. [https://github.com/lukechampine/jsteg](https://github.com/lukechampine/jsteg) Handy for Hackerrank Codefest CTF 2018.
+
 * Morse Code
 
 	Always test for this if you are seeing two distinct values... _it may not always be binary!_ Online decoders like so: [https://morsecode.scphillips.com/translator.html](https://morsecode.scphillips.com/translator.html) 	
@@ -377,6 +381,11 @@ Forensics
 ```
 python dumpzilla.py .mozilla/firefox/c3a958fk.default/ --Downloads --History --Bookmarks --Passwords
 ```
+
+
+* Repair image online tool
+
+    Good low-hanging fruit to throw any image at: [https://online.officerecovery.com/pixrecovery/](https://online.officerecovery.com/pixrecovery/)
 
 
 * `foremost`
@@ -774,3 +783,4 @@ sudo apt install -y caca-utils
 [Base85]: https://en.wikipedia.org/wiki/Ascii85
 [fcrackzip]: https://github.com/hyc/fcrackzip
 [zsteg]: https://github.com/zed-0xff/zsteg
+[jsteg]: https://github.com/lukechampine/jsteg
