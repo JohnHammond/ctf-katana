@@ -66,6 +66,10 @@ Steganography
 
     Another command-line tool to use against JPEG images. [https://github.com/lukechampine/jsteg](https://github.com/lukechampine/jsteg) Handy for Hackerrank Codefest CTF 2018.
 
+* [Jstego][Jstego]
+
+    A GUI tool for JPG steganography. [https://sourceforge.net/projects/jstego/](https://sourceforge.net/projects/jstego/) It is a [Java][Java] [JAR] file similar to stegsolve.jar
+
 * Morse Code
 
 	Always test for this if you are seeing two distinct values... _it may not always be binary!_ Online decoders like so: [https://morsecode.scphillips.com/translator.html](https://morsecode.scphillips.com/translator.html) 	
@@ -784,3 +788,4 @@ sudo apt install -y caca-utils
 [fcrackzip]: https://github.com/hyc/fcrackzip
 [zsteg]: https://github.com/zed-0xff/zsteg
 [jsteg]: https://github.com/lukechampine/jsteg
+[jstego]: https://sourceforge.net/projects/jstego/
