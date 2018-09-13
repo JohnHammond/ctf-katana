@@ -17,6 +17,10 @@ Hopefully, at some point I will develop software that will run through a lot of 
 Esoteric Languages
 -----------------------
 
+* [https://tio.run/](https://tio.run/)
+
+	An online tool that has a ton of Esoteric language interpreters. 
+
 * Brainfuck
 
 	This language is easily detectable by its huge use of plus signs, braces, and arrows. 	There are plenty of online interpreters, like this one: [https://copy.sh/brainfuck/](https://copy.sh/brainfuck/) Some example code:
@@ -45,6 +49,14 @@ Esoteric Languages
 
 Steganography
 ---------------------
+
+* [StegCracker][StegCracker]
+
+	Don't ever forget about [`steghide`][steghide]! This tool can use a password list like `rockyou.txt` with steghide. SOME IMAGES CAN HAVE MULTIPLE FILED ENCODED WITH MULTIPLE PASSWORDS.
+
+* [`steg_brute.py`](https://github.com/Va5c0/Steghide-Brute-Force-Tool)
+
+	This is similar to `stegcracker` above.
 
 * [`openstego`][OpenStego]
 
@@ -667,6 +679,18 @@ l(DId<j@<?3r@:F%a+D58'ATD4$Bl@l3De:,-DJs`8ARoFb/0JMK@qB4^F!,R<AKZ&-DfTqBG%G
 >uD.RTpAKYo'+CT/5+Cei#DII?(E,9)oF*2M7/c~>
 ```
 
+* [Base65535](https://github.com/qntm/base65536)
+
+
+	Unicode characters encoding. Includes a lot of seemingly random spaces and chinese characters!
+
+```
+𤇃𢊻𤄻嶜𤄋𤇁𡊻𤄛𤆬𠲻𤆻𠆜𢮻𤆻ꊌ𢪻𤆻邌𤆻𤊻𤅋𤲥𣾻𤄋𥆸𣊻𤅛ꊌ𤆻𤆱炼綻𤋅𤅴薹𣪻𣊻𣽻𤇆𤚢𣺻赈𤇣綹𤻈𤇣𤾺𤇃悺𢦻𤂻𤅠㢹𣾻𤄛𤆓𤦹𤊻𤄰炜傼𤞻𢊻𣲻𣺻ꉌ邹𡊻𣹫𤅋𤇅𣾻𤇄𓎜𠚻𤊻𢊻𤉛𤅫𤂑𤃃𡉌𤵛𣹛𤁐𢉋𡉻𡡫𤇠𠞗𤇡𡊄𡒌𣼻燉𣼋𦄘炸邹㢸𠞻𠦻𡊻𣈻𡈻𣈛𡈛ꊺ𠆼𤂅𣻆𣫃𤮺𤊻𡉋㽻𣺬𣈛𡈋𤭻𤂲𣈻𤭻𤊼𢈛儛𡈛ᔺ
+```
+
+* [Base41](https://github.com/sveljko/base41/blob/master/python/base41.py) 
+
+
 * Wordsearches
 
 	Some CTFs have me solve wordsearchs as part of a challenge (TJCTF 2018). This code is super helpful: [https://github.com/robbiebarrat/word-search](https://github.com/robbiebarrat/word-search)
@@ -789,3 +813,6 @@ sudo apt install -y caca-utils
 [zsteg]: https://github.com/zed-0xff/zsteg
 [jsteg]: https://github.com/lukechampine/jsteg
 [jstego]: https://sourceforge.net/projects/jstego/
+[StegCracker]: https://github.com/Paradoxis/StegCracker
+[Base41]: https://github.com/sveljko/base41/blob/master/python/base41.py
+[Base65535]: https://github.com/qntm/base65536
