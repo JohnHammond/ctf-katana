@@ -580,7 +580,7 @@ Reverse Engineering
 
 * IDA
 
-
+* Radare2 ( For GUI -> Cutter )
 
 
 PowerShell
