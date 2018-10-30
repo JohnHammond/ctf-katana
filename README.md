@@ -623,6 +623,10 @@ PowerShell
 
 	HUGE PowerShell library and tool to do a lot of post-exploitation.
 
+* [Bypass AMSI Anti-Malware Scan Interface](https://0x00-0x00.github.io/research/2018/10/28/How-to-bypass-AMSI-and-Execute-ANY-malicious-powershell-code.html?mkt_tok=eyJpIjoiWTJGaU5qbGlaVFZsTXpVdyIsInQiOiJBSXdzQm5FMGY0S1BrTWlBcVBlZ3ErN2NcL1RNeGkwcnNSK3FZcGVvaUhFRVJiQUhVcmVIWko0aWdNNCtXcVRrcWtDRTMxRGlpM1wvQlIxVHZlU1RUNk5sRVJnQ1dUZEFVQ0JTRHk4ejNVQTBWK1Y3Um1EWHZYdGY5YWQ5V2hTZFVXIn0%3D)
+
+	Great tool and guide for anti-virus evasion with PowerShell.
+
 
 Windows Executables
 -------------
