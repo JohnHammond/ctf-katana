@@ -108,7 +108,7 @@ Steganography
     When given a sequence with only A, C, G, T , there is an online mapping for these. Try this:
 
     ![img/dna_codes.png](img/dna_codes.png)
-    ![img/genome_coding.jpg](img/genome_coding.jpg)
+    ![img/genome_coding.jpg](img/genome-coding.jpg)
 
 * [`snow`][snow]
 
