@@ -101,7 +101,7 @@ Steganography
 
 * Whitespace
 
-	Tabs and spaces could be representing 1's and 0's and treating them as a binary message... or, they could be whitespace done with [`snow`][snow] or an esoteric programming language interpreter: [http://ws2js.luilak.net/interpreter.html](http://ws2js.luilak.net/interpreter.html)
+	Tabs and spaces could be representing 1's and 0's and treating them as a binary message... or, they could be whitespace done with [`snow`][snow] or an esoteric programming language interpreter: [https://tio.run/#whitespace](https://tio.run/#whitespace)
 
 * DNA Codes
 
