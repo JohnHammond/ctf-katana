@@ -67,6 +67,10 @@ Steganography
 
 	Don't ever forget about [`steghide`][steghide]! This tool can use a password list like `rockyou.txt` with steghide. SOME IMAGES CAN HAVE MULTIPLE FILED ENCODED WITH MULTIPLE PASSWORDS.
 
+* [Steganography Online](http://stylesuxx.github.io/steganography/)
+
+	A tool often used in CTFs for encoding messages into images.
+
 * [`steg_brute.py`](https://github.com/Va5c0/Steghide-Brute-Force-Tool)
 
 	This is similar to `stegcracker` above.
