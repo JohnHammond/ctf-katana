@@ -506,7 +506,7 @@ Web
 
 * `/.git/`
 	
-	A classic CTF challenge is to leave a `git` repository live and available on a website. You can see this with `nmap -A` (or whatever specific script catches it) and just by trying to view that specific folder, `/.git/`. A good command-line tool for this is [`GitDumper.sh`][https://github.com/internetwache/GitTools], or just simply using [`wget`][wget].
+	A classic CTF challenge is to leave a `git` repository live and available on a website. You can see this with `nmap -A` (or whatever specific script catches it) and just by trying to view that specific folder, `/.git/`. A good command-line tool for this is [`GitDumper.sh`](https://github.com/internetwache/GitTools), or just simply using [`wget`][wget].
 
 * [`GitDumper.sh`][GitDumper.sh]
 	
@@ -551,11 +551,11 @@ print scraper.get(url).content
 	
 * Cookie Catcher
 
-* [`requestb.in`][https://requestb.in/]
+* [`requestb.in`](https://requestb.in/)
 
 	A free tool and online end-point that can be used to catch HTTP requests. Typically these are controlled and set by finding a [XSS] vulnerabilty.
 
-* [`hookbin.com`][https://hookbin.com/]
+* [`hookbin.com`](https://hookbin.com/)
 
 	A free tool and online end-point that can be used to catch HTTP requests. Typically these are controlled and set by finding a [XSS] vulnerabilty.
 
@@ -849,3 +849,4 @@ sudo apt install -y caca-utils
 [StegCracker]: https://github.com/Paradoxis/StegCracker
 [Base41]: https://github.com/sveljko/base41/blob/master/python/base41.py
 [Base65535]: https://github.com/qntm/base65536
+[Easy Python Decompiler]: https://github.com/aliansi/Easy-Python-Decompiler-v1.3.2
