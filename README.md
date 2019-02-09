@@ -199,6 +199,11 @@ Cryptography
 
 	[http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx](http://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx), [https://www.guballa.de/vigenere-solver](https://www.guballa.de/vigenere-solver) and personal Python code here: [https://pastebin.com/2Vr29g6J](https://pastebin.com/2Vr29g6J)
 
+
+* Gronsfeld Cipher
+
+	A variant of the Vignere cipher that uses numbers insteads of letters. [http://rumkin.com/tools/cipher/gronsfeld.php](http://rumkin.com/tools/cipher/gronsfeld.php)
+
 * Beaufourt Cipher
 
 	[https://www.dcode.fr/beaufort-cipher](https://www.dcode.fr/beaufort-cipher)
