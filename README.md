@@ -517,9 +517,15 @@ Web
 	
 	A classic CTF challenge is to leave a `git` repository live and available on a website. You can see this with `nmap -A` (or whatever specific script catches it) and just by trying to view that specific folder, `/.git/`. A good command-line tool for this is [`GitDumper.sh`](https://github.com/internetwache/GitTools), or just simply using [`wget`][wget].
 
+	**Sometimes you might Bazaar or Mercurial or other distributed version control systems. You can use [https://github.com/kost/dvcs-ripper](https://github.com/kost/dvcs-ripper) for those!!**
+
 * [`GitDumper.sh`][GitDumper.sh]
 	
 	A command-line tool that will automatically scrape and download a [git] repository hosted online with a given URL.
+
+* Bazaar `.bzr`
+
+	If you see a publically accessible `.bzr` directory, you can use `bzr branch http://site output-directory` to download it. Or, use this utility: [https://github.com/kost/dvcs-ripper](https://github.com/kost/dvcs-ripper)
 
 * [XSS]/[Cross-site scripting]
 
