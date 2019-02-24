@@ -83,6 +83,8 @@ Steganography
 
 	A command-line tool typically used alongside a password or key, that could be uncovered some other way when solving a challenge. 
 
+# WHEN GIVEN A FILE TO WORK WITH, DO NOT FORGET TO RUN THIS STEGHIDE WITH AN EMPTY PASSWORD!
+
 * [`zsteg`][zsteg]
 
 	Command-line tool for use against Least Significant Bit steganography... unfortunately only works against PNG and BMP images.
@@ -596,7 +598,16 @@ print scraper.get(url).content
 
 
 * Burpsuite
-	
+
+
+* AWS / S3 Buckets
+
+	You can try and dump an AWS bucket like so. The `--no-sign-request` avoids the need for credentials, and `--recursive` will grab everything possible.
+
+```
+aws s3 cp --recursive --no-sign-request s3://<bucket_name> .
+```
+	i. e. `aws s3 cp --recursive --no-sign-request s3://tamuctf .`
 
 
 Reverse Engineering
