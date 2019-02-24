@@ -557,6 +557,10 @@ print scraper.get(url).content
 * [`wpscan`][wpscan]
 
 	* A Ruby script to scan and do reconnaissance on a [Wordpress] application. 
+
+* Wordpress Password Hash Generator
+
+	If you make it into a Wordpress database and can change passwords, reset the admin password to a new hash: [http://www.passwordtool.hu/wordpress-password-hash-generator-v3-v4](http://www.passwordtool.hu/wordpress-password-hash-generator-v3-v4). This will let you login to /wp-admin/ on the site.
 	
 * Cookie Catcher
 
