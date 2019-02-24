@@ -714,7 +714,6 @@ Miscellaneous
 ----------
 
 
-
 * [Base64], [Base32], [Base85]
 
 ```
@@ -789,6 +788,25 @@ sudo apt install -y caca-utils
 	Some CTFs will try and hide a message on a picture with strange symbols. Try and Google Reverse Image searcht these. They may be Egyptian Characters: 
 
 ![http://www.virtual-egypt.com/newhtml/hieroglyphics/sample/alphabet.gif](http://www.virtual-egypt.com/newhtml/hieroglyphics/sample/alphabet.gif)
+
+
+
+* Bitcoin
+
+	You might see a private Bitcoin key as a base64 encoded SHA256 hash, like this:
+
+```
+NWEyYTk5ZDNiYWEwN2JmYmQwOGI5NjEyMDVkY2FlODg3ZmIwYWNmOWYyNzI5MjliYWE3OTExZmFhNGFlNzc1MQ==
+```
+
+	Decoded, it is a hash: `5a2a99d3baa07bfbd08b961205dcae887fb0acf9f272929baa7911faa4ae7751`.
+
+	If you can find an AES ECB key along with (usually represented in hex or another encoding), you can decipher like so:
+
+```
+openssl enc -d -aes-256-ecb -in <(printf %s '5a2a99d3baa07bfbd08b961205dcae887fb0acf9f272929baa7911faa4ae7751' | xxd -r -p) -K '6fb3b5b05966fb06518ce6706ec933e79cfaea8f12b4485cba56321c7a62a077'
+MCA{I$love$bitcoin$so$much!}
+```
 
 
 [steghide]: http://steghide.sourceforge.net/
