@@ -83,6 +83,10 @@ Steganography
 
 	A command-line tool typically used alongside a password or key, that could be uncovered some other way when solving a challenge. 
 
+* [`stepic`](http://domnit.org/stepic/doc/)
+
+	Python image steganography. Stepic hides arbitrary data inside PIL images. Download it here: http://domnit.org/stepic/doc/
+
 # WHEN GIVEN A FILE TO WORK WITH, DO NOT FORGET TO RUN THIS STEGHIDE WITH AN EMPTY PASSWORD!
 
 * [`zsteg`][zsteg]
@@ -96,10 +100,6 @@ Steganography
 * [Jstego][Jstego]
 
     A GUI tool for JPG steganography. [https://sourceforge.net/projects/jstego/](https://sourceforge.net/projects/jstego/) It is a [Java][Java] [JAR] file similar to stegsolve.jar
-
-* [`stepic`](http://domnit.org/stepic/doc/)
-
-	Python image steganography. Stepic hides arbitrary data inside PIL images. Download it here: http://domnit.org/stepic/doc/
 
 * Morse Code
 
