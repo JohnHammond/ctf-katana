@@ -14,8 +14,51 @@ Hopefully, at some point I will develop software that will run through a lot of 
 ---------------
 
 
+Known Exploits
+------------------
+
+* Java RMI
+	
+	Metasploit module: `exploit/multi/misc/java_rmi_server`
+
+	When testing this, responses are _known to come back with an error or exception_. Your code MAY VERY WELL still be executing. Try and run commands that include a callback. And _use Python_ to live off the land and try avoid special characters, like `|` pipes! [ysoserial](https://github.com/frohoff/ysoserial) is a good tool for deserializing Java code to take advantage of this vulnerability.
+	
+* Heartbleed
+
+	Metasploit module: `auxiliary/scanner/ssl/openssl_heartbleed`
+
+	Be sure to use `set VERBOSE true` to see the retrieved results. This can often contain a flag or some valuable information. 
+
+* libssh - SSH
+
+	`libssh0.8.1` (or others??) is vulnerable to an easy and immediate login. Metasploit module: `auxiliary/scanner/ssh/libssh_auth_bypass`. Be sure to `set spawn_pty true` to actually receive a shell! Then `sessions -i 1` to interact with the shell spawned (or whatever appropriate ID)
+
+* Bruteforcing RDP
+
+	Bruteforcing RDP with `hydra` or `ncrack` is __NOT ALWAYS ADVISABLE__ because of Cred-SSB. An option _might_ be to script xrdp to automate against a password or word list... __but THIS IS NOT TESTED__.
+
+Excess
+--------
+
+* wifite
+
+	Brute-force a Wi-Fi access point.
+
+* [impacket](https://github.com/SecureAuthCorp/impacket)
+
+	Tool to quickly spin up a Samba share.
+
+* [enum4linux](https://github.com/portcullislabs/enum4linux)
+
+	Script to scan Windows Samba shares. VERY GOOD TO RUN FOR WINDOWS ENUMERATION.
+
+* Drupal [drupalgeddon](https://github.com/dreadlocked/Drupalgeddon2)
+
+	Attack script for old or outdated Drupal servers. Usually very effective.
+
 Esoteric Languages
 -----------------------
+
 
 * [https://tio.run/](https://tio.run/)
 
@@ -31,6 +74,10 @@ Esoteric Languages
 --.++++.+++++++++++++++.<<.>>-------.<+++++++++++++++.>+++..++++.--------.+++.<+++.<++++++++++++++++++++++++++
 .<++++++++++++++++++++++.>++++++++++++++..>+.----.>------.+++++++.--------.<+++.>++++++++++++..-------.++.
 ```
+
+* COW
+
+	This language is easily identified by numerous "MOO" statements and random capitalization. It has an option on [https://tio.run/](https://tio.run/).
 
 * [Malboge]
 
@@ -84,6 +131,15 @@ Steganography
 	A command-line tool typically used alongside a password or key, that could be uncovered some other way when solving a challenge. 
 
 # WHEN GIVEN A FILE TO WORK WITH, DO NOT FORGET TO RUN THIS STEGHIDE WITH AN EMPTY PASSWORD!
+
+* [ImageHide](https://www.softpedia.com/get/Security/Encrypting/ImageHide.shtml)
+
+	For PNG images (or BMP) images, there exists a Windows utility that can hide "ENCRYPTED" text within the LSB. If you also happen to have passwords, you can decrypt this and potentially find a flag. [https://www.softpedia.com/get/Security/Encrypting/ImageHide.shtml](https://www.softpedia.com/get/Security/Encrypting/ImageHide.shtml)
+
+
+* Unicode Steganography / Zero-Width Space Characters
+
+	Some text that may be trying to hide something, in a seemingly innocent way, like "Hmm, there may be something hiding here..." may include zero-width characters. This is a utility that might help: [https://330k.github.io/misc_tools/unicode_steganography.html](https://330k.github.io/misc_tools/unicode_steganography.html) ... Other options are just gross find and replace operations in Python IDLE.
 
 * [`zsteg`][zsteg]
 
@@ -169,7 +225,7 @@ Cryptography
 	Sometimes a "ciphertext" is just as easy as reversed text. Don't forgot to check under this rock! You can reverse a string in [Python] like so:
 
 ```
-"UOYMORFEDIHOTGNIYRTEBTHGIMFTCATAHTTERCESASISIHT"[::-1]
+"UOYMORFEDIHOTGNIYRTEBTHGIMFTCA.TAHTTERCESASISIHT"[::-1]
 ```
 
 * XOR
@@ -179,6 +235,10 @@ Cryptography
 	``` python
 	python >>> import pwn; pwn.xor("KEY", "RAW_BINARY_CIPHER")
 	```
+
+# IF YOU KNOW A DECENT CRIB (PLAINTEXT), USE CYBERCHEF TO HELP DETERMINE THE KEY
+
+# DO NOT FORGET TO JUST BRUTEFORCE JUST THE FIRST BYTE, OR TWO BYTES OR THREE BYTES.
 
 
 * Caesar Cipher
@@ -286,7 +346,6 @@ def root3rd(x):
 
 * Two-Time Pad
 
-	
 
 Networking
 ---------------
@@ -409,10 +468,16 @@ PDF Files
 
 	A command-line tool to extract files out of a [PDF].
 
-
 Forensics
 -----------
 
+* Python bytecode `uncompyle6`
+
+	To decompile bytecode, use `uncompyle6`. There is one special argument (I think `-d` or something???) that can have success if the default operation does not work. Do not give up hope when working with obvious Python bytecode. EasyPythonDecompiler might work, or perhaps testing with `uncompyle`
+
+* Keepass 
+
+	`keepassx` can be installed on Ubuntu to open and explore Keepass databases. Keepass databases master passwords can be cracked with `keepass2john`. 
 
 * [Magic Numbers]
 
@@ -583,6 +648,8 @@ print scraper.get(url).content
 	A command-line tool written in [Python] to automatically detect and exploit vulnerable SQL injection points.	
 
 * Flask Template Injection
+
+	Try `{{config}}` to leak out the secret key, or start to climb up the Python MRO to acheive code execution.
 
 	[https://nvisium.com/resources/blog/2015/12/07/injecting-flask.html](https://nvisium.com/resources/blog/2015/12/07/injecting-flask.html), [https://nvisium.com/resources/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html](https://nvisium.com/resources/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html), [https://nvisium.com/resources/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii.html](https://nvisium.com/resources/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii.html)
 
@@ -769,6 +836,10 @@ l(DId<j@<?3r@:F%a+D58'ATD4$Bl@l3De:,-DJs`8ARoFb/0JMK@qB4^F!,R<AKZ&-DfTqBG%G
 	A sliding puzzle that consists of a 4x4 grid with numbered square tiles, with one missing, set in a random order. It was involved in SharifCTF to determine if a group of these puzzles was solvable: [https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/](https://theromanxpl0it.github.io/ctf_sharifctf18/fifteenpuzzle/)
 
 
+* SETUID Binary Methodology
+
+	Don't forget to check "simple" things --- it doesn't need to be a pwn or binary exploitation challenge, keep in mind IT DOES NOT use a secure PATH like `sudo`.
+
 * Chrome Password Dump
 
 	A [Windows] command-line tool to dump passwords saved with Google Chrome.
@@ -808,6 +879,24 @@ openssl enc -d -aes-256-ecb -in <(printf %s '5a2a99d3baa07bfbd08b961205dcae887fb
 MCA{I$love$bitcoin$so$much!}
 ```
 
+* Missing `ls` or `dir` commands
+
+	If you cannot run `ls` or `dir`, or `find` or `grep`, to list files you can use 
+
+```
+echo *
+echo /any/path/*
+```
+
+
+* restricted bash (`rbash`) read files
+
+	If you are a restricted shell like `rbash` you can still read any file with some builtin commands like `mapfile`:
+
+```
+mapfile -t  < /etc/passwd
+printf "$s\n" "${anything[@]}"
+```
 
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
