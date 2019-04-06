@@ -40,7 +40,7 @@ Known Exploits
 Excess
 --------
 
-* wifite
+* [wifite2](https://github.com/derv82/wifite2)
 
 	Brute-force a Wi-Fi access point.
 
