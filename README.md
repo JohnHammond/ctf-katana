@@ -13,7 +13,6 @@ Hopefully, at some point I will develop software that will run through a lot of 
 
 ---------------
 
-
 Known Exploits
 ------------------
 
@@ -797,6 +796,19 @@ VisualBasicScript Reversing
 
 Miscellaneous
 ----------
+
+* GameBiy ROMS
+
+	You have options to run GameBoy ROMs... one is using VisualBoyAdvance, the oher is RetroArch (which is supposedly better):
+
+```
+# VisualBoyAdvance
+sudo add-apt-repository universe
+sudo apt install visualboyadvance
+
+# RetroArch
+sudo add-apt-repository ppa:libretro/stable && sudo apt-get update && sudo apt-get install -y retroarch* libretro-*
+```
 
 
 * References to DICE, or EFF
