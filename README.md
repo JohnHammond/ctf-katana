@@ -37,6 +37,16 @@ Known Exploits
 
 	Bruteforcing RDP with `hydra` or `ncrack` is __NOT ALWAYS ADVISABLE__ because of Cred-SSB. An option _might_ be to script xrdp to automate against a password or word list... __but THIS IS NOT TESTED__.
 
+* Apache Tomcat
+
+	If you can determine that you are working with an Apache Tomcat server (usually by visiting pages that do not exist and seeing a 404 error message), try to visit `/Manager`, which is usually accessible on Tomcat. Possible credentials could be `tomcat:tomcat`, `tomcat:s3cr3t`, `admin:s3cr3t`, `root:s3cr3t`, etc. etc.. Worthy of bruteforcing with `hydra`.
+
+	If you see URLs are appended with a `.action` (not a `.do`), you may be working with Apache Struts. 
+
+* Apache Struts
+
+	To identify the Apache Struts version is running,
+
 Excess
 --------
 
@@ -646,6 +656,22 @@ print scraper.get(url).content
 * [`wpscan`][wpscan]
 
 	* A Ruby script to scan and do reconnaissance on a [Wordpress] application. 
+
+* Mac AutoLogin Password Cracking
+
+Sometimes, given an Mac autologin password file `/etc/kcpassword`, you can crack it with this code:
+
+```
+def kcpasswd(ciphertext):
+    key = '7d895223d2bcddeaa3b91f'
+    while len(key) < (len(ciphertext)*2):
+        key = key + key
+    key = binasciiunhexlify(key)
+    result = ''
+    for i in range(len(ciphertext)):
+        result += chr(ord(ciphertext[i]) ^ (key[i]))
+    return result
+```
 
 * Wordpress Password Hash Generator
 
