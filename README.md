@@ -308,6 +308,15 @@ Cryptography
 
 * RSA: Multi-prime RSA
 
+	When you see multi-prime RSA, you can use calculate `phi` by still using all the factors.
+
+```
+phi = (a - 1) * (b - 1) * (c - 1)    # ... etcetera
+```
+
+__If FactorDB cannot find factors, try alpertron: [https://www.alpertron.com.ar/ECM.HTM](https://www.alpertron.com.ar/ECM.HTM)__
+
+
 * RSA: `e` is 3 (or small)
 
 	If `e` is 3, you can try the cubed-root attack. If you the cubed root of `c`, and if that is smaller than the cubed root of `n`, then your plaintext message `m` is just the cubed root of `c`! Here is [Python] code to take the cubed root:
