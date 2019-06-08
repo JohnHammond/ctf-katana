@@ -1010,6 +1010,14 @@ mapfile -t  < /etc/passwd
 printf "$s\n" "${anything[@]}"
 ```
 
+Jail Breaks	
+----------
+Sometimes you're jailed in an environment where you can potentially execute code.    
+* Python 3    
+`().__class__.__base__.__subclasses__()` - Gives access to `object` subclasses    
+
+
+
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
 [cribdrag.py]: https://github.com/SpiderLabs/cribdrag
