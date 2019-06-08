@@ -238,7 +238,9 @@ sudo apt install zbar-tools
 Cryptography
 -----------------
 
-
+* Cryptii
+	
+	[https://cryptii.com](https://cryptii.com) has multiple decoding tools like base64, Ceaser Cipher, ROT13, Vigenère Cipher and more.
 * Keyboard Shift
 	
 	[https://www.dcode.fr/keyboard-shift-cipher](https://www.dcode.fr/keyboard-shift-cipher) If you see any thing that has the shape of a sentence but it looks like nonsense letters, and notes some shift left or right, it may be a keyboard shift...
