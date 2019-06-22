@@ -29,19 +29,19 @@ Port Enumeration
 smbmap -H 10.10.10.125 -u anonymous
 ```
 
-	Or you can attempt just:
+Or you can attempt just:
 
 ```
 smbmap -H 10.10.10.125
 ```
 
-	And you can specify a domain like so:
+And you can specify a domain like so:
 
 ```
 smbmap -H 10.10.10.125 -u anonymous -D HTB.LOCAL
 ```
 
-	Worth trying `localhost` as a domain, if that gets "NO_LOGON_SERVERS"
+Worth trying `localhost` as a domain, if that gets "NO_LOGON_SERVERS"
 
 ```
 smbmap -H 10.10.10.125 -u anonymous -D localhost
