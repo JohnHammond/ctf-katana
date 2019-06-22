@@ -13,6 +13,67 @@ Hopefully, at some point I will develop software that will run through a lot of 
 
 ---------------
 
+Port Enumeration
+====================
+
+
+445 (smb/Samba)
+-----------------------
+
+* `smbmap`
+
+
+	To try and list shares as the anonymous use **DO THIS** (this doesn't always work for some weird reason)
+
+```
+smbmap -H 10.10.10.125 -u anonymous
+```
+
+	Or you can attempt just:
+
+```
+smbmap -H 10.10.10.125
+```
+
+	And you can specify a domain like so:
+
+```
+smbmap -H 10.10.10.125 -u anonymous -D HTB.LOCAL
+```
+
+	Worth trying `localhost` as a domain, if that gets "NO_LOGON_SERVERS"
+
+```
+smbmap -H 10.10.10.125 -u anonymous -D localhost
+```
+
+
+* `enum4linux`
+
+
+```
+enum4linux 10.10.10.125
+```
+
+* `smbclient`
+
+
+
+```	
+smbclient -N -L //10.10.10.125/
+```
+
+
+SNMP
+=======================
+
+* snmp-check
+
+```
+snmp-check 10.10.10.125
+```
+
+
 Known Exploits
 ------------------
 
@@ -879,7 +940,12 @@ VisualBasicScript Reversing
 Miscellaneous
 ----------
 
-* GameBiy ROMS
+* Punchcards
+
+	Sometimes it sucks to do these manually, but you can here: [http://tyleregeto.com/article/punch-card-emulator](http://tyleregeto.com/article/punch-card-emulator)
+
+
+* GameBoy ROMS
 
 	You have options to run GameBoy ROMs... one is using VisualBoyAdvance, the oher is RetroArch (which is supposedly better):
 
@@ -1025,6 +1091,28 @@ Jail Breaks
 Sometimes you're jailed in an environment where you can potentially execute code.    
 * Python 3    
 `().__class__.__base__.__subclasses__()` - Gives access to `object` subclasses    
+
+
+Trivia
+-------------
+
+* The British used this machine to crack the German Enigma machine messages.
+
+```
+Bombe
+```
+
+* What is the Windows LM hash for a blank password?
+
+```
+aad3b435b51404eeaad3b435b51404ee
+```
+
+* for Windows LM hashing, after the password is split into two 7 character chunks, they are used as DES keys to encrypt what string?
+
+```
+KGS!@#$%
+```
 
 
 
