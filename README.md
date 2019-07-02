@@ -493,6 +493,10 @@ def root3rd(x):
 
 	The telltale sign for this kind of challenge is an enormously large `e` value. Typically `e` is either 65537 (0x10001) or `3` (like for a Chinese Remainder Theorem challenge). Some stolen code available here: [https://pastebin.com/VKjYsDqD](https://pastebin.com/VKjYsDqD)
 
+* RSA:  Boneh-Durfee Attack
+	The tellgate sign for this kind of challenge is also an enormously large `e` value (`e` and `n` have similar size).
+Some code for this attack can be found [here](https://github.com/mimoo/RSA-and-LLL-attacks/blob/master/boneh_durfee.sage) 
+
 * RSA: Chinese Remainder Attack
 
 	These challenges can be spotted when given  mutiple `c` cipher texts and multiple `n` moduli. `e` must be the same number of given `c` and `n` pairs. Some handmade code here: [https://pastebin.com/qypwc6wH](https://pastebin.com/qypwc6wH)
