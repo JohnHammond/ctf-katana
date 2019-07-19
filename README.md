@@ -1026,7 +1026,7 @@ VisualBasicScript Reversing
 Miscellaneous
 ----------
 
-* Punchcards
+* Punchcards(/Punch cards)
 
 	Sometimes it sucks to do these manually, but you can here: [http://tyleregeto.com/article/punch-card-emulator](http://tyleregeto.com/article/punch-card-emulator)
 
@@ -1200,6 +1200,25 @@ aad3b435b51404eeaad3b435b51404ee
 KGS!@#$%
 ```
 
+* I am the person responsible for stopping one of the worst ransomware. Who am I?
+
+```
+MalwareTech
+```
+
+* I am used by devices for sending error messages. Who am I?
+
+```
+ICMP
+```
+
+
+*  We are a CTF team which is open to everybody. Who are we?    
+
+
+```
+OpenToAll
+```
 
 
 [steghide]: http://steghide.sourceforge.net/
