@@ -341,12 +341,26 @@ Steganography
 
 	Tabs and spaces could be representing 1's and 0's and treating them as a binary message... or, they could be whitespace done with [`snow`][snow] or an esoteric programming language interpreter: [https://tio.run/#whitespace](https://tio.run/#whitespace)
 
+* Audio Speed Change (also change pitch)
+
+```
+mplayer -af scaletempo -speed 64 flag.mp3
+``` 
+
 * DNA Codes
 
     When given a sequence with only A, C, G, T , there is an online mapping for these. Try this:
 
     ![img/dna_codes.png](img/dna_codes.png)
     ![img/genome_coding.jpg](img/genome-coding.jpg)
+
+* Extract Thumbnail (data is covered in original image)
+
+	If you have an image where the data you need is covered, try viewing the thumbnail:
+
+```
+exiftool -b -ThumbnailImage my_image.jpg > my_thumbnail.jpg
+```
 
 * [`snow`][snow]
 
@@ -739,6 +753,16 @@ PNG File Forensics
 * `pngcheck`
 
 	A command-line tool for "checking" a [PNG] image file. Especially good for verifying checksums.
+
+
+* [`pngcsum`](http://www.schaik.com/png/pngcsum/pngcsum-v01.tar.gz)
+
+	Correct the CRC on all of the parts of a [PNG] image file.
+
+
+* [https://github.com/sherlly/PCRT](https://github.com/sherlly/PCRT)
+
+	Utility to try and correct a [PNG] file. **NOTE... this will NOT SAVE your file as new one. YOU HAVE TO SHOW the file (enter y when using the script]) to actually view the new image.**
 
 
 APK Forensics
