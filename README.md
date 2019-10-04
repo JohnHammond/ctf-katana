@@ -985,17 +985,18 @@ aws s3 cp --recursive --no-sign-request s3://<bucket_name> .
 Reverse Engineering
 -------------------
 
-* `ltrace` and `strace`
+* [ltrace](http://man7.org/linux/man-pages/man1/ltrace.1.html) and [strace](https://strace.io)
 
 	Easy command-line tools to see some of the code being executed as you follow through a binary. Usage: `ltrace ./binary`
 
-* Hopper
+* [Hopper](https://www.hopperapp.com)
+	Hopper Disassembler, the reverse engineering tool that lets you disassemble, decompile and debug your applications.
 
-* Binary Ninja
+* [Binary Ninja](https://binary.ninja)
 
-* gdb
+* [gdb](https://en.wikipedia.org/wiki/GNU_Debugger)
 
-* IDA
+* [IDA](https://www.hex-rays.com/products/ida/support/download.shtml)
 
 
 
