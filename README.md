@@ -294,6 +294,10 @@ Steganography
 
 	Python image steganography. Stepic hides arbitrary data inside PIL images. Download it here: http://domnit.org/stepic/doc/
 
+* [Digital Invisible Ink Stego Tool](http://diit.sourceforge.net/)
+
+	A Java steganography tool that can hide any sort of file inside a digital image (regarding that the message will fit, and the image is 24 bit colour)
+
 # WHEN GIVEN A FILE TO WORK WITH, DO NOT FORGET TO RUN THIS STEGHIDE WITH AN EMPTY PASSWORD!
 
 * [ImageHide](https://www.softpedia.com/get/Security/Encrypting/ImageHide.shtml)
