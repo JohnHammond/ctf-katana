@@ -1074,6 +1074,11 @@ VisualBasicScript Reversing
 Miscellaneous
 ----------
 
+* [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
+
+	Super useful repo that has a payload for basically every sceario
+
+
 * Punchcards(/Punch cards)
 
 	Sometimes it sucks to do these manually, but you can here: [http://tyleregeto.com/article/punch-card-emulator](http://tyleregeto.com/article/punch-card-emulator)
