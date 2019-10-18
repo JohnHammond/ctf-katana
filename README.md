@@ -994,16 +994,28 @@ Reverse Engineering
 	Easy command-line tools to see some of the code being executed as you follow through a binary. Usage: `ltrace ./binary`
 
 * [Hopper](https://www.hopperapp.com)
+	
 	Hopper Disassembler, the reverse engineering tool that lets you disassemble, decompile and debug your applications.
 
 * [Binary Ninja](https://binary.ninja)
 
+	Clean and easy with multithreaded analysis. Support multiple architectures, platforms, and compilers.
+
 * [gdb](https://en.wikipedia.org/wiki/GNU_Debugger)
+
+	Fast and powerful debugger for UNIX system. More powerful if this tool is equipped with [PEDA](https://github.com/longld/peda).
 
 * [IDA](https://www.hex-rays.com/products/ida/support/download.shtml)
 
+	It's one of popular debugger and disassembler tool with rich of features, cross platform, multi-processor disassembler.
 
+* [radare2](https://github.com/radareorg/radare2)
 
+	Portable tool for hex editor, binary analysis, disassembler, debugger, etc.
+
+* [Ghidra](https://ghidra-sre.org/)
+
+	New RE tool developed by NSA with the same feature as IDA
 
 PowerShell
 -------------
