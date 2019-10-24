@@ -1283,14 +1283,14 @@ ICMP
 
 
 *  We are a CTF team which is open to everybody. Who are we?    
+```
+[```link```](http://example.com "Title")
 
-[link](http://example.com "Title")
+
 ```
 [link](http://example.com "Title")
-[link](http://example.com "Title")
-```
 
-[link](http://example.com "Title")
+
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
 [cribdrag.py]: https://github.com/SpiderLabs/cribdrag
