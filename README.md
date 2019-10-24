@@ -1283,12 +1283,11 @@ ICMP
 
 
 *  We are a CTF team which is open to everybody. Who are we?    
-```
-[```link```](http://example.com "Title")
 
 
 ```
-[link](http://example.com "Title")
+OpenToAll - https://opentoallctf.github.io/
+```
 
 
 [steghide]: http://steghide.sourceforge.net/
