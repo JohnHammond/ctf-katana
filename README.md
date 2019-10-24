@@ -1286,7 +1286,7 @@ ICMP
 
 
 ```
-.[OpenToAll]:(https://opentoallctf.github.io/)
+[OpenToAll]: https://opentoallctf.github.io/
 ```
 
 
