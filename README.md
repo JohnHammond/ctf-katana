@@ -1286,7 +1286,7 @@ ICMP
 
 
 ```
-[`OpenToAll`](https://opentoallctf.github.io/)
+[link](http://example.com "Title")
 ```
 
 
