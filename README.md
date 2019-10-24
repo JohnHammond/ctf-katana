@@ -552,10 +552,16 @@ Some code for this attack can be found [here](https://github.com/mimoo/RSA-and-L
 
 * AES ECB
 
-	The "blind SQL" of cryptography... leak the flag out by testing for characters just one byte away from the block length. 
+	The "blind SQL" of cryptography... leak the flag out by testing for characters just one byte away from the block length.
 
 
 * Two-Time Pad
+
+* [`International Code of Signals maritime `][intmaritimeflags]
+
+	First drafted by the British Board of Trade in 1855 and adopted as a world-wide standard on 1 January 1901. It is used for communications with ships, but also occasionally used by geocaching mystery caches (puzzle caches), CTFs and various logic puzzles. You may want to give a look a the tool [`maritime flags translater`][maritime flags translater]
+
+![https://www.marvindisplay.com/images/SignalFlags.gif](https://www.marvindisplay.com/images/SignalFlags.gif)
 
 
 Networking
@@ -1388,3 +1394,5 @@ OpenToAll
 [impacket]: https://github.com/SecureAuthCorp/impacket
 [Responder]: https://github.com/SpiderLabs/Responder
 [Responder.py]: https://github.com/SpiderLabs/Responder
+[intmaritimeflags]: https://en.wikipedia.org/wiki/International_Code_of_Signals
+[maritime flags translater]: https://www.boxentriq.com/code-breaking/international-code-of-signals
