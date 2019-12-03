@@ -592,7 +592,7 @@ Some code for this attack can be found [here](https://github.com/mimoo/RSA-and-L
 
 * [International Code of Signals Maritime]
 
-	First drafted by the British Board of Trade in 1855 and adopted as a world-wide standard on 1 January 1901. It is used for communications with ships, but also occasionally used by geocaching mystery caches (puzzle caches), CTFs and various logic puzzles. You may want to give a look a the tool [maritime flags translator]
+	First drafted by the British Board of Trade in 1855 and adopted as a world-wide standard on 1 January 1901. It is used for communications with ships, but also occasionally used by geocaching mystery caches (puzzle caches), CTFs and various logic puzzles. You may want to give a look at the tool [maritime flags translator].
 
 ![https://www.marvindisplay.com/images/SignalFlags.gif](https://www.marvindisplay.com/images/SignalFlags.gif)
 
