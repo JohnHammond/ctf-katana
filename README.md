@@ -39,13 +39,13 @@ smbmap -H 10.10.10.125
 And you can specify a domain like so:
 
 ```
-smbmap -H 10.10.10.125 -u anonymous -D HTB.LOCAL
+smbmap -H 10.10.10.125 -u anonymous -d HTB.LOCAL
 ```
 
 Worth trying `localhost` as a domain, if that gets "NO_LOGON_SERVERS"
 
 ```
-smbmap -H 10.10.10.125 -u anonymous -D localhost
+smbmap -H 10.10.10.125 -u anonymous -d localhost
 ```
 
 * `enum4linux`
