@@ -13,6 +13,15 @@ Hopefully, at some point I will develop software that will run through a lot of 
 
 ---------------
 
+Post-Exploitation
+====================
+
+* [static-binaries]
+
+	If you need to use a program that is not on the box you just broke into, try and build a static binary! I've seen this used on Fatty for HackTheBox, getting a `pty` with the typical `python -c 'import pty...'` trick when it didn't have Python originally!
+
+	https://github.com/andrew-d/static-binaries
+
 Port Enumeration
 ====================
 
@@ -1379,6 +1388,24 @@ Sometimes you're jailed in an environment where you can potentially execute code
 Trivia
 -------------
 
+* Trivia Question: a reliable mechanism for websites to remember stateful information. Yummy!
+
+```
+Cookie
+```
+
+* A group of binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation
+
+```
+base64
+```
+
+* This CVE Proof of concept Shows NSA.gov playing "Never Gonna Give You Up," by 1980s heart-throb Rick Astley.
+
+```
+CVE-2020-0601
+```
+
 * The British used this machine to crack the German Enigma machine messages.
 
 ```
@@ -1518,3 +1545,4 @@ OpenToAll - https://opentoallctf.github.io/
 [Responder.py]: https://github.com/SpiderLabs/Responder
 [International Code of Signals Maritime]: https://en.wikipedia.org/wiki/International_Code_of_Signals
 [maritime flags translator]: https://www.dcode.fr/maritime-signals-code
+[static-binaries]: https://github.com/andrew-d/static-binaries
