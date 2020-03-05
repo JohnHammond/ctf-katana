@@ -1338,7 +1338,7 @@ sudo apt install -y caca-utils
 
 * Strange Symbols/Characters
 
-	Some CTFs will try and hide a message on a picture with strange symbols. Try and Google Reverse Image searcht these. They may be Egyptian Characters: 
+	Some CTFs will try and hide a message on a picture with strange symbols. Try and Google Reverse Image searching these. They may be Egyptian Characters: 
 
 ![http://www.virtual-egypt.com/newhtml/hieroglyphics/sample/alphabet.gif](http://www.virtual-egypt.com/newhtml/hieroglyphics/sample/alphabet.gif)
 
