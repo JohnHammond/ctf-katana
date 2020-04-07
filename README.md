@@ -402,6 +402,7 @@ mplayer -af scaletempo -speed 64 flag.mp3
     ![img/dna_codes.png](img/dna_codes.png)
     ![img/genome_coding.jpg](img/genome-coding.jpg)
 
+
 * Extract Thumbnail (data is covered in original image)
 
 	If you have an image where the data you need is covered, try viewing the thumbnail:
@@ -606,6 +607,35 @@ Some code for this attack can be found [here](https://github.com/mimoo/RSA-and-L
 	First drafted by the British Board of Trade in 1855 and adopted as a world-wide standard on 1 January 1901. It is used for communications with ships, but also occasionally used by geocaching mystery caches (puzzle caches), CTFs and various logic puzzles. You may want to give a look at the tool [maritime flags translator].
 
 ![https://www.marvindisplay.com/images/SignalFlags.gif](https://www.marvindisplay.com/images/SignalFlags.gif)
+
+
+* Daggers Cipher
+
+The daggers cipher is another silly text-to-image encoder. This is the key, and you can
+find a decoder on [https://www.dcode.fr/daggers-alphabet](https://www.dcode.fr/daggers-alphabet).
+
+![img/dagger_cipher.png](img/dagger_cipher.png)
+
+* Hylian Language (Twilight Princess)
+
+The Hylian language is another silly text-to-image encoder. This is the key, and you can
+find a decoder on [https://www.dcode.fr/hylian-language-twilight-princess](https://www.dcode.fr/hylian-language-twilight-princess).
+
+![img/hylian.png](img/hylian.png)
+
+* Hylian Language (Breath of the Wild)
+
+The Hylian language is another silly text-to-image encoder. This is the key, and you can
+find a decoder on [https://www.dcode.fr/hylian-language-breath-of-the-wild](https://www.dcode.fr/hylian-language-breath-of-the-wild).
+
+![img/botw.jpg](img/botw.jpg)
+
+* Sheikah Language (Breathe of the Wild)
+
+The Sheikah language is another silly text-to-image encoder. This is the key, and you can
+find a decoder on [https://www.dcode.fr/sheikah-language](https://www.dcode.fr/sheikah-language).
+
+![img/sheikah.png](img/sheikah.png)
 
 
 Networking
