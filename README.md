@@ -552,7 +552,7 @@ def root3rd(x):
     return y 
 ``` 
 
-* RSA: Weiner's Little D Attack
+* RSA: Wiener's Little D Attack
 
 	The telltale sign for this kind of challenge is an enormously large `e` value. Typically `e` is either 65537 (0x10001) or `3` (like for a Chinese Remainder Theorem challenge). Some stolen code available here: [https://pastebin.com/VKjYsDqD](https://pastebin.com/VKjYsDqD)
 
