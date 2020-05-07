@@ -515,6 +515,11 @@ Cryptography
 
 	[https://www.dcode.fr/beaufort-cipher](https://www.dcode.fr/beaufort-cipher)
 
+* [Bacon Cipher](https://en.wikipedia.org/wiki/Bacon%27s_cipher)
+	
+	A substitution cipher that replaces each character with five characters from a set of two (A and B is used most of the time). If we look at A as 0 and B as 1 it is a special encoding to binary numbers, where the character A has the value of binary `b00000`. Easy to recognize, because the ciphertext only contains two characters (e.g.: A and B) and the length of the ciphertext is divisible by 5. Example: `AAABB AAABA ABBAB AAABB AABAA AAAAB AAAAA AAABA ABBAB ABBAA`.
+
+        [Online tool](http://rumkin.com/tools/cipher/baconian.php)
 
 * Python random module cracker/predictor
 
