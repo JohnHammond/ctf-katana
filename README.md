@@ -17,6 +17,7 @@ are welcome!
 
 1. [Post-Exploitation](#post-exploitation)
 2. [Port Enumeration](#port-enumeration)
+2. [445 (smb/Samba)](#445-smbsamba)
 
 ---------------
 
