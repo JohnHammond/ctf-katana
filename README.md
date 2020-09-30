@@ -12,6 +12,11 @@ This repository, at the time of writing, will just host a listing of tools and c
 finally released. Katana is available at [https://github.com/JohnHammond/katana](https://github.com/JohnHammond/katana).** Pull-requests and contributions
 are welcome!
 
+---------------
+# Table of Contents
+
+1. [Post-Exploitation](#post-exploitation)
+2. [Port Enumeration](#port-enumeration)
 
 ---------------
 
