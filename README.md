@@ -834,6 +834,11 @@ sudo apt install foremost
 * [photorec]
 
 	Another command-line utility that comes with `testdisk`. It is file data recovery software designed to recover lost files including video, documents and archives from hard disks, CD-ROMs, and lost pictures (thus the Photo Recovery name) from digital camera memory. PhotoRec ignores the file system and goes after the underlying data, so it will still work even if your media's file system has been severely damaged or reformatted. 
+	
+* ['https://29a.ch/photo-forensics/#forensic-magnifier'][Image forensic]
+
+         Good tool to analysis you image features Magnifier, Clone Detection, Error Level analysis, Noise Analusis, level Sweep, Meta Data, Geo tags, Thumbnail Analysis , JPEG Analysis, Strings Extraction
+
 
 
 PNG File Forensics
