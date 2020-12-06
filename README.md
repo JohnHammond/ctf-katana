@@ -350,6 +350,10 @@ Steganography
 
 	A tool often used in CTFs for encoding messages into images.
 
+* [StegSeek][StegSeek]
+
+	This is similar to `stegcracker`, but _much_ faster. Can also extract metadata without a password list.
+
 * [`steg_brute.py`](https://github.com/Va5c0/Steghide-Brute-Force-Tool)
 
 	This is similar to `stegcracker` above.
@@ -1610,6 +1614,7 @@ OpenToAll - https://opentoallctf.github.io/
 [jsteg]: https://github.com/lukechampine/jsteg
 [jstego]: https://sourceforge.net/projects/jstego/
 [StegCracker]: https://github.com/Paradoxis/StegCracker
+[StegSeek]: https://github.com/RickdeJager/stegseek
 [Base41]: https://github.com/sveljko/base41/blob/master/python/base41.py
 [Base65535]: https://github.com/qntm/base65536
 [Easy Python Decompiler]: https://github.com/aliansi/Easy-Python-Decompiler-v1.3.2
