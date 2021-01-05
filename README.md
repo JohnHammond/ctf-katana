@@ -1458,6 +1458,11 @@ mapfile -t  < /etc/passwd
 printf "$s\n" "${anything[@]}"
 ```
 
+
+* SSTV Space Transmissions
+
+	Some CTFs will present you with strange audio transmissions from outer space. These are SSTV transmissions which must be decoded in order to view the image 	they are carrying. One of the available tools to decode an SSTV transmission on Windows is [RX-SSTV](http://users.belgacom.net/hamradio/rxsstv.htm).
+
 Jail Breaks
 ----------
 Sometimes you're jailed in an environment where you can potentially execute code.
