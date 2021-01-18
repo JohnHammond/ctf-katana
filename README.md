@@ -1615,6 +1615,7 @@ OpenToAll - https://opentoallctf.github.io/
 [Base64]: https://en.wikipedia.org/wiki/Base64
 [Base32]: https://en.wikipedia.org/wiki/Base32
 [Base85]: https://en.wikipedia.org/wiki/Ascii85
+[Base91]:https://www.dcode.fr/base-91-encoding
 [fcrackzip]: https://github.com/hyc/fcrackzip
 [zsteg]: https://github.com/zed-0xff/zsteg
 [jsteg]: https://github.com/lukechampine/jsteg
