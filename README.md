@@ -678,6 +678,13 @@ find a decoder on [https://www.dcode.fr/sheikah-language](https://www.dcode.fr/s
 
 ![img/sheikah.png](img/sheikah.png)
 
+* Hexahue Alphabet 
+
+The hexhue is an another tex-to-image enocder. you can find a decoder
+on [https://www.boxentriq.com/code-breaking/hexahue](https://www.boxentriq.com/code-breaking/hexahue)
+
+![img](img/hexahue-alphabet.png)
+
 
 Networking
 ---------------
