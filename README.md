@@ -1471,6 +1471,11 @@ mapfile -t  < /etc/passwd
 printf "$s\n" "${anything[@]}"
 ```
 
+* SSTV Space Transmissions
+
+	In some some CTFs you are presented with strange audio transmissions from outer space. These are Slow-Scan Television (SSTV) transmissions which carry static images. To decode SSTV transmissions and view their contents you can use [RX-SSTV](http://users.belgacom.net/hamradio/rxsstv.htm) on Windows or [Qsstv](http://users.telenet.be/on4qz/qsstv/downloads/) on Linux.
+
+
 Jail Breaks
 ----------
 Sometimes you're jailed in an environment where you can potentially execute code.
