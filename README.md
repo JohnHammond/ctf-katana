@@ -251,7 +251,7 @@ Excess
 
 	Script to scan Windows Samba shares. VERY GOOD TO RUN FOR WINDOWS ENUMERATION.
 
-* [Drupalgeddon2](https://github.com/dreadlocked/Drupalgeddon2)
+* [drupalgeddon2](https://github.com/dreadlocked/Drupalgeddon2)
 
 	Attack script for old or outdated Drupal servers. Usually very effective.
 
