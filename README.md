@@ -251,7 +251,7 @@ Excess
 
 	Script to scan Windows Samba shares. VERY GOOD TO RUN FOR WINDOWS ENUMERATION.
 
-* Drupal [drupalgeddon](https://github.com/dreadlocked/Drupalgeddon2)
+* [drupalgeddon2](https://github.com/dreadlocked/Drupalgeddon2)
 
 	Attack script for old or outdated Drupal servers. Usually very effective.
 
@@ -259,11 +259,11 @@ Esoteric Languages
 -----------------------
 
 
-* [https://tio.run/](https://tio.run/)
+* [Try It Online](https://tio.run/)
 
 	An online tool that has a ton of Esoteric language interpreters.
 
-* Brainfuck
+* [Brainfuck](https://esolangs.org/wiki/brainfuck)
 
 	This language is easily detectable by its huge use of plus signs, braces, and arrows. 	There are plenty of online interpreters, like this one: [https://copy.sh/brainfuck/](https://copy.sh/brainfuck/) Some example code:
 
@@ -274,19 +274,25 @@ Esoteric Languages
 .<++++++++++++++++++++++.>++++++++++++++..>+.----.>------.+++++++.--------.<+++.>++++++++++++..-------.++.
 ```
 
-* COW
+* [COW](https://esolangs.org/wiki/COW)
 
-	This language is easily identified by numerous "MOO" statements and random capitalization. It has an option on [https://tio.run/](https://tio.run/).
+	This language is easily identified by numerous "MOO" statements and random capitalization. It has an option on [https://tio.run/](https://tio.run/) Some example code:
 
-* [Malboge]
+```
+ MoO moO MoO mOo MOO OOM MMM moO moO
+ MMM mOo mOo moO MMM mOo MMM moO moO
+ MOO MOo mOo MoO moO moo mOo mOo moo
+ ```
 
-	An esoteric language that looks a lot like Base85... but isn't. Often has references to "Inferno" or "Hell" or "Dante." Online interpreters like so: [http://www.malbolge.doleczek.pl/](http://www.malbolge.doleczek.pl/) Example code:
+* [Malboge](https://esolangs.org/wiki/malbolge)
+
+	An esoteric language that looks a lot like Base85... but isn't. Often has references to "Inferno" or "Hell" or "Dante." Online interpreters like so: [http://www.malbolge.doleczek.pl/](http://www.malbolge.doleczek.pl/) Some example code:
 
 ```
 (=<`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:'8dc
 ```
 
-* [Piet]
+* [Piet](https://esolangs.org/wiki/piet)
 
 	A graphical programming language... looks like large 8-bit pixels in a variety of colors. Can be interpreted with the tool [`npiet`][npiet]
 
@@ -294,7 +300,7 @@ Esoteric Languages
 
 * [Ook!](http://esolangs.org/wiki/ook!)
 
-	A joke language. Recognizable by `.` and `?`, and `!`.
+	A joke language. Recognizable by `.` and `?`, and `!`. Online interpreter for this language: [https://www.dcode.fr/ook-language](https://www.dcode.fr/ook-language) Some example code:
 
 ```
 Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
@@ -305,9 +311,10 @@ Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook?
 Ook! Ook! Ook? Ook! Ook? Ook. Ook. Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
 ```
 
-* [Rockstar](https://codewithrockstar.com/)
+* [Rockstar](https://esolangs.org/wiki/Rockstar)
 
 	A language intended to look like song lyrics [github link](https://github.com/RockstarLang/rockstar).
+	Rockstar has an official online interpreter which you can find here: [https://codewithrockstar.com/online](https://codewithrockstar.com/online)
 
 	below is fizzbuzz in Rockstar:
 ```
@@ -1306,9 +1313,6 @@ Binary Exploitation/pwn
 
 	64-bit buffer overflow challenges are often difficult because the null bytes get in the way of memory addresses (for the function you want to jump to, that you can usually find with `readelf -s`). But, check if whether or not the function address you need starts with the same hex values already on the stack (in `rsp`). Maybe you only have to write two or three bytes after the overflow, rather than the whole function address.
 
-
-VisualBasicScript Reversing
----------------------------
 
 
 Miscellaneous
