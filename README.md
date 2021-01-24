@@ -259,11 +259,11 @@ Esoteric Languages
 -----------------------
 
 
-* [https://tio.run/](https://tio.run/)
+* [Try It Online](https://tio.run/)
 
 	An online tool that has a ton of Esoteric language interpreters.
 
-* Brainfuck
+* [Brainfuck]
 
 	This language is easily detectable by its huge use of plus signs, braces, and arrows. 	There are plenty of online interpreters, like this one: [https://copy.sh/brainfuck/](https://copy.sh/brainfuck/) Some example code:
 
@@ -274,7 +274,7 @@ Esoteric Languages
 .<++++++++++++++++++++++.>++++++++++++++..>+.----.>------.+++++++.--------.<+++.>++++++++++++..-------.++.
 ```
 
-* COW
+* [COW]
 
 	This language is easily identified by numerous "MOO" statements and random capitalization. It has an option on [https://tio.run/](https://tio.run/).
 
