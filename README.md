@@ -263,7 +263,7 @@ Esoteric Languages
 
 	An online tool that has a ton of Esoteric language interpreters.
 
-* [Brainfuck]
+* [Brainfuck](https://esolangs.org/wiki/brainfuck)
 
 	This language is easily detectable by its huge use of plus signs, braces, and arrows. 	There are plenty of online interpreters, like this one: [https://copy.sh/brainfuck/](https://copy.sh/brainfuck/) Some example code:
 
@@ -274,11 +274,11 @@ Esoteric Languages
 .<++++++++++++++++++++++.>++++++++++++++..>+.----.>------.+++++++.--------.<+++.>++++++++++++..-------.++.
 ```
 
-* [COW]
+* [COW](https://esolangs.org/wiki/COW)
 
 	This language is easily identified by numerous "MOO" statements and random capitalization. It has an option on [https://tio.run/](https://tio.run/).
 
-* [Malboge]
+* [Malboge](https://esolangs.org/wiki/malbolge)
 
 	An esoteric language that looks a lot like Base85... but isn't. Often has references to "Inferno" or "Hell" or "Dante." Online interpreters like so: [http://www.malbolge.doleczek.pl/](http://www.malbolge.doleczek.pl/) Example code:
 
@@ -286,7 +286,7 @@ Esoteric Languages
 (=<`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:'8dc
 ```
 
-* [Piet]
+* [Piet](https://esolangs.org/wiki/piet)
 
 	A graphical programming language... looks like large 8-bit pixels in a variety of colors. Can be interpreted with the tool [`npiet`][npiet]
 
