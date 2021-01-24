@@ -294,7 +294,7 @@ Esoteric Languages
 
 * [Ook!](http://esolangs.org/wiki/ook!)
 
-	A joke language. Recognizable by `.` and `?`, and `!`. Online interpreter for this: [https://www.dcode.fr/ook-language] Example code:
+	A joke language. Recognizable by `.` and `?`, and `!`. Online interpreter for this language: [https://www.dcode.fr/ook-language](https://www.dcode.fr/ook-language) Example code:
 
 ```
 Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
@@ -308,7 +308,7 @@ Ook! Ook! Ook? Ook! Ook? Ook. Ook. Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
 * [Rockstar](https://esolangs.org/wiki/Rockstar)
 
 	A language intended to look like song lyrics [github link](https://github.com/RockstarLang/rockstar).
-	Rockstar has an official online interpreter which you can find here: [https://codewithrockstar.com/online]
+	Rockstar has an official online interpreter which you can find here: [https://codewithrockstar.com/online](https://codewithrockstar.com/online)
 
 	below is fizzbuzz in Rockstar:
 ```
