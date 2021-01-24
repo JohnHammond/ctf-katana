@@ -305,9 +305,10 @@ Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook?
 Ook! Ook! Ook? Ook! Ook? Ook. Ook. Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
 ```
 
-* [Rockstar](https://codewithrockstar.com/)
+* [Rockstar](https://esolangs.org/wiki/Rockstar)
 
 	A language intended to look like song lyrics [github link](https://github.com/RockstarLang/rockstar).
+	Rockstar has an official online interpreter which you can find here: [https://codewithrockstar.com/online]
 
 	below is fizzbuzz in Rockstar:
 ```
