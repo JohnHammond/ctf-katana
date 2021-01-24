@@ -294,7 +294,7 @@ Esoteric Languages
 
 * [Ook!](http://esolangs.org/wiki/ook!)
 
-	A joke language. Recognizable by `.` and `?`, and `!`.
+	A joke language. Recognizable by `.` and `?`, and `!`. Online interpreter for this: [https://www.dcode.fr/ook-language] Example code:
 
 ```
 Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
