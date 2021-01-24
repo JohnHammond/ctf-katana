@@ -276,11 +276,17 @@ Esoteric Languages
 
 * [COW](https://esolangs.org/wiki/COW)
 
-	This language is easily identified by numerous "MOO" statements and random capitalization. It has an option on [https://tio.run/](https://tio.run/).
+	This language is easily identified by numerous "MOO" statements and random capitalization. It has an option on [https://tio.run/](https://tio.run/) Some example code:
+
+```
+ MoO moO MoO mOo MOO OOM MMM moO moO
+ MMM mOo mOo moO MMM mOo MMM moO moO
+ MOO MOo mOo MoO moO moo mOo mOo moo
+ ```
 
 * [Malboge](https://esolangs.org/wiki/malbolge)
 
-	An esoteric language that looks a lot like Base85... but isn't. Often has references to "Inferno" or "Hell" or "Dante." Online interpreters like so: [http://www.malbolge.doleczek.pl/](http://www.malbolge.doleczek.pl/) Example code:
+	An esoteric language that looks a lot like Base85... but isn't. Often has references to "Inferno" or "Hell" or "Dante." Online interpreters like so: [http://www.malbolge.doleczek.pl/](http://www.malbolge.doleczek.pl/) Some example code:
 
 ```
 (=<`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:'8dc
@@ -294,7 +300,7 @@ Esoteric Languages
 
 * [Ook!](http://esolangs.org/wiki/ook!)
 
-	A joke language. Recognizable by `.` and `?`, and `!`. Online interpreter for this language: [https://www.dcode.fr/ook-language](https://www.dcode.fr/ook-language) Example code:
+	A joke language. Recognizable by `.` and `?`, and `!`. Online interpreter for this language: [https://www.dcode.fr/ook-language](https://www.dcode.fr/ook-language) Some example code:
 
 ```
 Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
