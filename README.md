@@ -462,6 +462,11 @@ exiftool -b -ThumbnailImage my_image.jpg > my_thumbnail.jpg
 
 	Some classic challenges use an audio file to hide a flag or other sensitive stuff. SONIC visualizer easily shows you [spectrogram](https://en.wikipedia.org/wiki/Spectrogram). __If it sounds like there is random bleeps and bloops in the sound, try this tactic!__
 
+* [XIAO Steganography](https://xiao-steganography.en.softonic.com/)
+
+	Being a Windows-specific tool, it is often used in CTFs to hide flags inside audio files. __Take a look if the challenge has some odd strings which might resemble passwords.__
+
+
 * [Detect DTMF Tones]
 
 	Audio frequencies common to a phone button, DTMF: [https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling).
