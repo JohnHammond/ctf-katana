@@ -46,8 +46,8 @@ are welcome!
 30. [Trivia](#trivia)
 
 ---------------
-
-Post-Exploitation
+**[⬆ Back to Index](#ctf-katana)**
+### Post-Exploitation 
 ====================
 
 * [static-binaries]
@@ -56,11 +56,13 @@ Post-Exploitation
 
 	https://github.com/andrew-d/static-binaries
 
-Port Enumeration
+**[⬆ Back to Index](#ctf-katana)**
+### Port Enumeration
 ====================
 
 
-445 (smb/Samba)
+**[⬆ Back to Index](#ctf-katana)**
+### 445 (smb/Samba)
 -----------------------
 
 * [`smbmap`](https://github.com/ShawnDEvans/smbmap)
@@ -116,7 +118,8 @@ smbclient -m SMB2 -N //10.10.10.125/Reports
 
 You will see a `smb: \>` prompt, and you can use `ls` and `get` to retrieve files or even `put` if you need to place files there.
 
-1433 (Microsoft SQL Server)
+**[⬆ Back to Index](#ctf-katana)**
+### 1433 (Microsoft SQL Server)
 ------------------------------
 
 * `impacket` -> `mssqlclient.py`
@@ -145,7 +148,8 @@ though, you may not have permission. If that DOES succeed, you can now run comma
 SQL> xp_cmdshell whoami
 ```
 
-SNMP
+**[⬆ Back to Index](#ctf-katana)**
+### SNMP
 ----------------
 
 * snmp-check
@@ -155,7 +159,8 @@ snmp-check 10.10.10.125
 ```
 
 
-Microsoft Office Macros
+**[⬆ Back to Index](#ctf-katana)**
+### Microsoft Office Macros
 ---------------
 
 * [`oletools`](https://github.com/decalage2/oletools) -> `olevba`
@@ -166,7 +171,8 @@ Microsoft Office Macros
 olevba "Currency Volume Report.xlsm"
 ```
 
-Retrieving Network Service Hashes
+**[⬆ Back to Index](#ctf-katana)**
+### Retrieving Network Service Hashes
 ----------------------------------
 
 
@@ -178,7 +184,8 @@ Retrieving Network Service Hashes
 ```
 
 
-Windows Reverse Shells
+**[⬆ Back to Index](#ctf-katana)**
+### Windows Reverse Shells
 ---------------------------
 
 
@@ -203,7 +210,8 @@ rlwrap nc -lnvp 9001
 ```
 
 
-Known Exploits
+**[⬆ Back to Index](#ctf-katana)**
+### Known Exploits
 ------------------
 
 * Java RMI
@@ -236,7 +244,8 @@ Known Exploits
 
 	To identify the Apache Struts version is running,
 
-Excess
+**[⬆ Back to Index](#ctf-katana)**
+### Excess
 --------
 
 * [wifite2](https://github.com/derv82/wifite2)
@@ -255,7 +264,8 @@ Excess
 
 	Attack script for old or outdated Drupal servers. Usually very effective.
 
-Esoteric Languages
+**[⬆ Back to Index](#ctf-katana)**
+### Esoteric Languages
 -----------------------
 
 
@@ -346,7 +356,8 @@ Take it to the top
 Whisper my world
 ```
 
-Steganography
+**[⬆ Back to Index](#ctf-katana)**
+### Steganography
 ---------------------
 
 * [StegCracker][StegCracker]
@@ -497,7 +508,8 @@ sudo apt install zbar-tools
 
 	I have seen some challenges use just the end of `.` or `?` or `!` to represent the [Ook](http://esolangs.org/wiki/ook!) esoteric programming language. Don't forget that is a thing!
 
-Cryptography
+**[⬆ Back to Index](#ctf-katana)**
+### Cryptography
 -----------------
 
 * Cryptii
@@ -698,7 +710,8 @@ on [https://www.boxentriq.com/code-breaking/hexahue](https://www.boxentriq.com/c
 ![img](img/hexahue-alphabet.png)
 
 
-Networking
+**[⬆ Back to Index](#ctf-katana)**
+### Networking
 ---------------
 
 * [Wireshark]
@@ -732,7 +745,8 @@ ls -1t | head -5 # see the last 5 recently modified files
 
 	A GUI tool to visualize network traffic.
 
-PHP
+**[⬆ Back to Index](#ctf-katana)**
+### PHP
 ------------
 
 * Magic Hashes
@@ -808,7 +822,8 @@ http://103.5.112.91:1234/?cmd=whoami&page=data://text/plain;base64,PD9waHAgZWNob
 ```
 
 
-PDF Files
+**[⬆ Back to Index](#ctf-katana)**
+### PDF Files
 -------------
 
 * `pdfinfo`
@@ -827,7 +842,8 @@ PDF Files
 
 	A command-line tool to extract files out of a [PDF].
 
-Forensics
+**[⬆ Back to Index](#ctf-katana)**
+### Forensics
 -----------
 
 * Python bytecode `uncompyle6`
@@ -897,7 +913,8 @@ sudo apt install foremost
 
 
 
-PNG File Forensics
+**[⬆ Back to Index](#ctf-katana)**
+### PNG File Forensics
 --------------------
 
 
@@ -916,7 +933,8 @@ PNG File Forensics
 	Utility to try and correct a [PNG] file. **NOTE... this will NOT SAVE your file as new one. YOU HAVE TO SHOW the file (enter y when using the script]) to actually view the new image.**
 
 
-APK Forensics
+**[⬆ Back to Index](#ctf-katana)**
+### APK Forensics
 ---------------
 
 * [`apktool`][apktool]
@@ -938,7 +956,8 @@ apktool d <file.apk>
 	A GUI tool to decompile Java code, and JAR files.
 
 
-Web
+**[⬆ Back to Index](#ctf-katana)**
+### Web
 ----------------
 
 * `robots.txt`
@@ -1133,7 +1152,8 @@ aws s3 cp --recursive --no-sign-request s3://<bucket_name> .
 	i. e. `aws s3 cp --recursive --no-sign-request s3://tamuctf .`
 
 
-Reverse Engineering
+**[⬆ Back to Index](#ctf-katana)**
+### Reverse Engineering
 -------------------
 
 * [ltrace](http://man7.org/linux/man-pages/man1/ltrace.1.html) and [strace](https://strace.io)
@@ -1253,7 +1273,8 @@ Reverse Engineering
 	$ ./a
 	```
 
-PowerShell
+**[⬆ Back to Index](#ctf-katana)**
+### PowerShell
 -------------
 
 * [nishang]
@@ -1269,7 +1290,8 @@ PowerShell
 	Great tool and guide for anti-virus evasion with PowerShell.
 
 
-Windows Executables
+**[⬆ Back to Index](#ctf-katana)**
+### Windows Executables
 -------------
 
 * [`pefile`][pefile]
@@ -1290,7 +1312,8 @@ Windows Executables
 
 	When debugging AutoIT programs, you may get a notification: "This is a compiled AutoIT script". Here is a good thing to use to decode them: [https://www.autoitscript.com/site/autoit/downloads/](https://www.autoitscript.com/site/autoit/downloads/)
 
-Python Reversing
+**[⬆ Back to Index](#ctf-katana)**
+### Python Reversing
 ------------
 
 * [Easy Python Decompiler](https://sourceforge.net/projects/easypythondecompiler/)
@@ -1304,7 +1327,8 @@ Python Reversing
 
 
 
-Binary Exploitation/pwn
+**[⬆ Back to Index](#ctf-katana)**
+### Binary Exploitation/pwn
 --------------
 
 * Basic Stack Overflow
@@ -1325,7 +1349,8 @@ Binary Exploitation/pwn
 
 
 
-Miscellaneous
+**[⬆ Back to Index](#ctf-katana)**
+### Miscellaneous
 ----------
 
 * [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
@@ -1485,14 +1510,16 @@ mapfile -t  < /etc/passwd
 printf "$s\n" "${anything[@]}"
 ```
 
-Jail Breaks
+**[⬆ Back to Index](#ctf-katana)**
+### Jail Breaks
 ----------
 Sometimes you're jailed in an environment where you can potentially execute code.
 * Python 3
 `().__class__.__base__.__subclasses__()` - Gives access to `object` subclasses
 
 
-Trivia
+**[⬆ Back to Index](#ctf-katana)**
+### Trivia
 -------------
 
 * Trivia Question: a reliable mechanism for websites to remember stateful information. Yummy!
