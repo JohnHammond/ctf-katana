@@ -371,7 +371,7 @@ Steganography
 
 * [`Stegsolve.jar`][Stegsolve.jar]
 
-	A [Java][Java] [`.JAR`][JAR] tool, that will open an image and let you as the user arrow through different renditions of the image (viewing color channels, inverted colors, and more). The tool is surprisingly useful.
+	A [Java][Java] [`.JAR`][JAR] tool, that will open an image and let you as the user arrow through different renditions of the image (viewing color channels, inverted colors, and more). The tool is surprisingly useful. After checking all layers and channels. Have a look in the offset! For this you need to use the option "Analyse > Stegogram Solver".
 
 * [`steghide`][steghide]
 
