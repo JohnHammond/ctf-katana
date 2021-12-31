@@ -519,6 +519,10 @@ Cryptography
 "UOYMORFEDIHOTGNIYRTEBTHGIMFTCA.TAHTTERCESASISIHT"[::-1]
 ```
 
+* Twin Hex 
+
+	The twinhex encoder and decoder are available at https://www.calcresult.com/misc/cyphers/twin-hex.html
+
 * XOR
 
 	ANY text could be XOR'd. Techniques for this are Trey's code, and XORing the data against the known flag format. Typically it is given in just hex, but once it is decoded into raw binary data, it gives it keeps it's hex form (as in `\xde\xad\xbe\xef` etc..) Note that you can do easy XOR locally with Python like so (you need `pwntools` installed):
