@@ -44,6 +44,7 @@ are welcome!
 28. [Miscellaneous](#miscellaneous)
 29. [Jail Breaks](#jail-breaks)
 30. [Trivia](#trivia)
+31. [Excel files](#excel-files)
 
 ---------------
 
@@ -1551,6 +1552,11 @@ ICMP
 OpenToAll - https://opentoallctf.github.io/
 ```
 
+Excel files
+-------------
+
+- For doing a forensic analysis on an excel file you may unzip it.
+- Some excel sheet are protected, in that case, search for the file (usually an xml file) where there is a sheet protection hash and salt. For removing the protection, remove every thing in the tag < sheet protection algorithm name> etc, re-zip everything...
 
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
