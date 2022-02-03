@@ -349,7 +349,9 @@ Whisper my world
 
 Steganography
 ---------------------
-
+* [PDF][PDF]
+	Try to open the pdf in photoshop as you can see other layers.
+	
 * [StegCracker][StegCracker]
 
 	Don't ever forget about [`steghide`][steghide]! This tool can use a password list like `rockyou.txt` with steghide. SOME IMAGES CAN HAVE MULTIPLE FILED ENCODED WITH MULTIPLE PASSWORDS.
