@@ -1330,7 +1330,7 @@ Miscellaneous
 
 * [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
-	Super useful repo that has a payload for basically every sceario
+	Super useful repo that has a payload for basically every scenario
 
 
 * Punchcards(/Punch cards)
