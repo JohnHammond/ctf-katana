@@ -349,6 +349,8 @@ Whisper my world
 
 Steganography
 ---------------------
+* For pictures you may want to increase the dimension for ex: 200x180 to 200x200. (u can do that with winhex)
+
 * Don't forget to see this https://book.hacktricks.xyz/stego/stego-tricks
 
 * [PDF][PDF]
