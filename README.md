@@ -349,6 +349,8 @@ Whisper my world
 
 Steganography
 ---------------------
+* Don't forget to see this https://book.hacktricks.xyz/stego/stego-tricks
+
 * [PDF][PDF]
 	Try to open the pdf in photoshop as you can see other layers.
 
