@@ -403,7 +403,9 @@ Steganography
 * Unicode Steganography / Zero-Width Space Characters
 
 	Some text that may be trying to hide something, in a seemingly innocent way, like "Hmm, there may be something hiding here..." may include zero-width characters. This is a utility that might help: [https://330k.github.io/misc_tools/unicode_steganography.html](https://330k.github.io/misc_tools/unicode_steganography.html) ... Other options are just gross find and replace operations in Python IDLE.
-
+* Offline LSB Tools
+	This one is better than online ones: StegoLSB: https://gist.github.com/dhondta/d2151c82dcd9a610a7380df1c6a0272c
+	
 * Online LSB Tools
 
 	There are many online LSB tools that work in different ways. If you are given a file that you know is part of a Least Significant Bit challenge, try these tools:
