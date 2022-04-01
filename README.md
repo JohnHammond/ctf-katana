@@ -1,7 +1,5 @@
-CTF-Katana
+CTF-Katana-Steg
 ===============
-
-> John Hammond | February 1st, 2018
 
 --------------------------
 
@@ -15,15 +13,6 @@ are welcome!
 ---------------
 # Table of Contents
 
-1. [Post-Exploitation](#post-exploitation)
-2. [Port Enumeration](#port-enumeration)
-3. [445 (smb/Samba)](#445-smbsamba)
-4. [1433 (Microsoft SQL Server)](#1433-microsoft-sql-server)
-5. [SNMP](#snmp)
-6. [Microsoft Office Macros](#microsoft-office-macros)
-7. [Retrieving Network Service Hashes](#retrieving-network-service-hashes)
-8. [Windows Reverse Shells](#windows-reverse-shells)
-9. [Known Exploits](#known-exploits)
 10. [Excess](#excess)
 11. [Esoteric Languages](#esoteric-languages)
 13. [Steganography](#steganography)
@@ -350,6 +339,7 @@ Whisper my world
 Steganography
 ---------------------
 * For pictures you may want to increase the dimension for ex: 200x180 to 200x200. (u can do that with winhex)
+* You may know which file you have with exiftool
 
 * Don't forget to see this https://book.hacktricks.xyz/stego/stego-tricks
 
