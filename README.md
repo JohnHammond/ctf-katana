@@ -1,4 +1,4 @@
-CTF-Katana-Steg
+CTF-Katana-Steg-Crypto
 ===============
 
 --------------------------
@@ -43,25 +43,6 @@ Zip
 Zip into zips here you are : https://github.com/nlitsme/zipdump
 command that works: zipdump.py --dumpraw --recurse dump.zip --extract
 
-
-Excess
---------
-
-* [wifite2](https://github.com/derv82/wifite2)
-
-	Brute-force a Wi-Fi access point.
-
-* [impacket](https://github.com/SecureAuthCorp/impacket)
-
-	Tool to quickly spin up a Samba share.
-
-* [enum4linux](https://github.com/portcullislabs/enum4linux)
-
-	Script to scan Windows Samba shares. VERY GOOD TO RUN FOR WINDOWS ENUMERATION.
-
-* [drupalgeddon2](https://github.com/dreadlocked/Drupalgeddon2)
-
-	Attack script for old or outdated Drupal servers. Usually very effective.
 
 Esoteric Languages
 -----------------------
