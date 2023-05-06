@@ -315,6 +315,8 @@ sudo apt install zbar-tools
 Cryptography
 -----------------
 
+* To identify, use dcode or https://www.cryptool.org/en/cto/ncid#:~:text=NCID%20allows%20to%20identify%20the%20cipher%20type%2C%20given,from%20which%20you%20can%20select%20one%20or%20more.
+
 * Cryptii
 
 	[https://cryptii.com](https://cryptii.com) has multiple decoding tools like base64, Ceaser Cipher, ROT13, Vigenère Cipher and more.
